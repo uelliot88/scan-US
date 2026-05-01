@@ -107,9 +107,16 @@ PAGE_SIZE = 40
 total = len(symbol_list)
 total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE
 
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 1
+st.session_state.current_page = max(1, min(st.session_state.current_page, total_pages))
+
 col_info, col_page = st.columns([3, 1])
 with col_page:
-    page = st.selectbox('頁碼', list(range(1, total_pages + 1)), index=0, label_visibility='collapsed')
+    page = st.selectbox('頁碼', list(range(1, total_pages + 1)),
+                        index=st.session_state.current_page - 1,
+                        key='page_select', label_visibility='collapsed')
+    st.session_state.current_page = page
 with col_info:
     st.markdown(f"<div style='font-size:0.9rem; color:#000; padding-top:6px;'>共 {total} 檔，第 {page}/{total_pages} 頁</div>", unsafe_allow_html=True)
 
@@ -218,8 +225,12 @@ for i, sym in enumerate(page_symbols):
         )
 
         with cols[i % 2]:
-            checked = st.checkbox(title_label, value=sym in st.session_state.selected,
-                                  key=f"chk_{page}_{sym}")
+            chk_col, title_col = st.columns([0.05, 0.95])
+            with chk_col:
+                checked = st.checkbox('', value=sym in st.session_state.selected,
+                                      key=f"chk_{page}_{sym}", label_visibility='collapsed')
+            with title_col:
+                st.markdown(title_label)
             if checked:
                 st.session_state.selected.add(sym)
             else:
@@ -246,5 +257,54 @@ for i, sym in enumerate(page_symbols):
         st.error(f"渲染 {sym} 時發生錯誤: {e}")
         continue
 
-st.write("---")
-st.write(f"第 {page} 頁結束，共 {total_pages} 頁")
+st.markdown("---")
+
+# 底部分頁導覽
+def get_page_range(current, total):
+    if total <= 9:
+        return list(range(1, total + 1))
+    pages = set([1, total])
+    for p in range(max(1, current - 2), min(total, current + 2) + 1):
+        pages.add(p)
+    result, prev = [], None
+    for p in sorted(pages):
+        if prev and p - prev > 1:
+            result.append('...')
+        result.append(p)
+        prev = p
+    return result
+
+page_range = get_page_range(page, total_pages)
+
+# 上一頁 / 下一頁按鈕列
+prev_col, _, next_col = st.columns([1, 4, 1])
+with prev_col:
+    if st.button('◀  上一頁', disabled=(page == 1), key='nav_prev', use_container_width=True):
+        st.session_state.current_page = page - 1
+        st.rerun()
+with next_col:
+    if st.button('下一頁  ▶', disabled=(page == total_pages), key='nav_next', use_container_width=True):
+        st.session_state.current_page = page + 1
+        st.rerun()
+
+# 頁碼列
+NUM_COLS = len(page_range)
+if NUM_COLS > 0:
+    page_cols = st.columns(NUM_COLS)
+    for idx, p in enumerate(page_range):
+        with page_cols[idx]:
+            if p == '...':
+                st.markdown("<div style='text-align:center; font-size:1rem; padding-top:4px;'>…</div>",
+                            unsafe_allow_html=True)
+            elif p == page:
+                st.markdown(
+                    f"<div style='text-align:center; font-weight:900; font-size:1.1rem; "
+                    f"padding-top:2px; border-bottom:3px solid #000; padding-bottom:2px;'>{p}</div>",
+                    unsafe_allow_html=True
+                )
+            else:
+                if st.button(str(p), key=f'nav_p_{p}', use_container_width=True):
+                    st.session_state.current_page = p
+                    st.rerun()
+
+st.markdown("<br>", unsafe_allow_html=True)
