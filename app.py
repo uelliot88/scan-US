@@ -115,7 +115,7 @@ col_info, col_page = st.columns([3, 1])
 with col_page:
     page = st.selectbox('頁碼', list(range(1, total_pages + 1)),
                         index=st.session_state.current_page - 1,
-                        key='page_select', label_visibility='collapsed')
+                        label_visibility='collapsed')
     st.session_state.current_page = page
 with col_info:
     st.markdown(f"<div style='font-size:0.9rem; color:#000; padding-top:6px;'>共 {total} 檔，第 {page}/{total_pages} 頁</div>", unsafe_allow_html=True)
@@ -282,9 +282,7 @@ nav_cols = st.columns(nav_widths)
 
 with nav_cols[0]:
     if st.button('◀ 前一頁', disabled=(page == 1), key='nav_prev', use_container_width=True):
-        new_page = page - 1
-        st.session_state.current_page = new_page
-        st.session_state['page_select'] = new_page
+        st.session_state.current_page = page - 1
         st.rerun()
 
 for idx, p in enumerate(page_range):
@@ -300,14 +298,11 @@ for idx, p in enumerate(page_range):
         else:
             if st.button(str(p), key=f'nav_p_{p}', use_container_width=True):
                 st.session_state.current_page = p
-                st.session_state['page_select'] = p
                 st.rerun()
 
 with nav_cols[-1]:
     if st.button('下一頁 ▶', disabled=(page == total_pages), key='nav_next', use_container_width=True):
-        new_page = page + 1
-        st.session_state.current_page = new_page
-        st.session_state['page_select'] = new_page
+        st.session_state.current_page = page + 1
         st.rerun()
 
 st.markdown("<br>", unsafe_allow_html=True)
