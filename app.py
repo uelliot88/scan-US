@@ -277,30 +277,27 @@ def get_page_range(current, total):
 page_range = get_page_range(page, total_pages)
 
 # 底部單行導覽：◀前一頁  1 2 3 … 10  下一頁▶
-nav_widths = [2] + [1] * len(page_range) + [2]
-nav_cols = st.columns(nav_widths)
+page_parts = []
+for p in page_range:
+    if p == '...':
+        page_parts.append('…')
+    elif p == page:
+        page_parts.append(f'<b><u>{p}</u></b>')
+    else:
+        page_parts.append(str(p))
+page_nums_html = ' &nbsp; '.join(page_parts)
 
-with nav_cols[0]:
+prev_col, mid_col, next_col = st.columns([2, 6, 2])
+with prev_col:
     if st.button('◀ 前一頁', disabled=(page == 1), key='nav_prev', use_container_width=True):
         st.session_state.current_page = page - 1
         st.rerun()
-
-for idx, p in enumerate(page_range):
-    with nav_cols[idx + 1]:
-        if p == '...':
-            st.markdown("<div style='text-align:center; padding-top:6px;'>…</div>", unsafe_allow_html=True)
-        elif p == page:
-            st.markdown(
-                f"<div style='text-align:center; font-weight:900; font-size:1.1rem; "
-                f"padding-top:4px; border-bottom:3px solid #000;'>{p}</div>",
-                unsafe_allow_html=True
-            )
-        else:
-            if st.button(str(p), key=f'nav_p_{p}', use_container_width=True):
-                st.session_state.current_page = p
-                st.rerun()
-
-with nav_cols[-1]:
+with mid_col:
+    st.markdown(
+        f"<div style='text-align:center; padding-top:6px; font-size:1rem;'>{page_nums_html}</div>",
+        unsafe_allow_html=True
+    )
+with next_col:
     if st.button('下一頁 ▶', disabled=(page == total_pages), key='nav_next', use_container_width=True):
         st.session_state.current_page = page + 1
         st.rerun()
