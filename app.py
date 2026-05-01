@@ -199,6 +199,25 @@ all_results = filtered
 if 'selected' not in st.session_state:
     st.session_state.selected = set()
 
+def sync_selected_from_checkboxes():
+    selected = set(st.session_state.selected)
+    prefix = 'chk_'
+    for key, checked in st.session_state.items():
+        if not key.startswith(prefix):
+            continue
+        sym = key[len(prefix):]
+        if checked:
+            selected.add(sym)
+        else:
+            selected.discard(sym)
+    st.session_state.selected = selected
+
+def toggle_selected(sym):
+    if st.session_state.get(f'chk_{sym}', False):
+        st.session_state.selected.add(sym)
+    else:
+        st.session_state.selected.discard(sym)
+
 # ==========================================
 # 5. 分頁設定
 # ==========================================
@@ -248,6 +267,7 @@ with col_info:
 
 start = (page - 1) * PAGE_SIZE
 page_symbols = symbol_list[start:start + PAGE_SIZE]
+sync_selected_from_checkboxes()
 
 # 收藏下載列
 sel_count = len(st.session_state.selected)
@@ -371,13 +391,10 @@ for i, sym in enumerate(page_symbols):
             chk_col, title_col = st.columns([0.05, 0.95])
             with chk_col:
                 checked = st.checkbox('', value=sym in st.session_state.selected,
-                                      key=f"chk_{page}_{sym}", label_visibility='collapsed')
+                                      key=f"chk_{sym}", label_visibility='collapsed',
+                                      on_change=toggle_selected, args=(sym,))
             with title_col:
                 st.markdown(title_html, unsafe_allow_html=True)
-            if checked:
-                st.session_state.selected.add(sym)
-            else:
-                st.session_state.selected.discard(sym)
 
             st.plotly_chart(
                 fig,
