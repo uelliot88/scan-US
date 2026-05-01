@@ -339,17 +339,17 @@ for i, sym in enumerate(page_symbols):
 
         code = sym.replace('.TWO', '').replace('.TW', '')
         sector = k_data.get('sector', '')
-        stock_name = name_map.get(sym, '')
+        stock_name = name_map.get(sym, '').rstrip('*')
         stock_note = get_stock_note(sym, code, sector)
         concepts = get_stock_concepts(sym, code)
         tooltip_lines = []
         if stock_note:
             tooltip_lines.append(stock_note)
         if concepts:
-            tooltip_lines.append(f"族群標籤：{'、'.join(concepts)}")
+            tooltip_lines.append(f"市場主題：{'、'.join(concepts)}")
         if sector and not any(line.startswith('產業別：') for line in tooltip_lines):
             tooltip_lines.append(f"產業別：{sector}")
-        stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無族群標籤').replace('\n', '<br>')
+        stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無市場主題').replace('\n', '<br>')
         title_text = (
             f"{code} {stock_name}"
             f" {'｜漲後整理' if k_data.get('type')=='A' else '｜多頭排列'}"
