@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import json
+import html
 
 # ==========================================
 # 頁面與底色初始化
@@ -51,6 +52,35 @@ st.markdown("""
     .pagination-nav .disabled-page {
         opacity: 0.45;
     }
+    .stock-title {
+        position: relative;
+        display: inline-block;
+        font-weight: 900;
+        cursor: help;
+    }
+    .stock-title .stock-tooltip {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: 20;
+        left: 0;
+        top: 1.8rem;
+        width: max-content;
+        max-width: 320px;
+        padding: 8px 10px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        background: #ffffff;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+        font-size: 0.85rem;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: normal;
+    }
+    .stock-title:hover .stock-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -63,6 +93,14 @@ def load_analysis_results():
             return json.load(f)
     except FileNotFoundError:
         return None
+
+def load_stock_notes():
+    try:
+        with open('stock_notes.json', 'r', encoding='utf-8') as f:
+            notes = json.load(f)
+            return notes if isinstance(notes, dict) else {}
+    except FileNotFoundError:
+        return {}
 
 data_store = load_analysis_results()
 
@@ -89,6 +127,21 @@ st.markdown(f"""
 all_results = data_store['results']
 name_map = data_store.get('name_map', {})
 sector_map = data_store.get('sector_map', {})
+business_map = data_store.get('business_map', {})
+stock_notes = load_stock_notes()
+
+def get_stock_note(symbol, code, sector):
+    note = (
+        stock_notes.get(symbol)
+        or stock_notes.get(code)
+        or business_map.get(symbol)
+        or business_map.get(code)
+    )
+    if note:
+        return str(note)
+    if sector:
+        return f"主要營業項目：尚未建立備註\n產業別：{sector}"
+    return "主要營業項目：尚未建立備註"
 
 # 篩選列
 filter_col1, filter_col2 = st.columns(2)
@@ -267,13 +320,22 @@ for i, sym in enumerate(page_symbols):
 
         code = sym.replace('.TWO', '').replace('.TW', '')
         sector = k_data.get('sector', '')
-        title_label = (
-            f"**{code} {name_map.get(sym, '')}"
+        stock_name = name_map.get(sym, '')
+        stock_note = get_stock_note(sym, code, sector)
+        stock_note_html = html.escape(stock_note).replace('\n', '<br>')
+        title_text = (
+            f"{code} {stock_name}"
             f" {'｜漲後整理' if k_data.get('type')=='A' else '｜多頭排列'}"
             f"{f'  [{sector}]' if sector else ''}"
             f"{'  🔵外資' if k_data.get('inst_foreign') else ''}"
             f"{'  🟢投信' if k_data.get('inst_trust') else ''}"
-            f"{'  VOL🔺' if k_data.get('vol_surge') else ''}**"
+            f"{'  VOL🔺' if k_data.get('vol_surge') else ''}"
+        )
+        title_html = (
+            '<span class="stock-title">'
+            f'{html.escape(title_text)}'
+            f'<span class="stock-tooltip">{stock_note_html}</span>'
+            '</span>'
         )
 
         with cols[i % 2]:
@@ -282,7 +344,7 @@ for i, sym in enumerate(page_symbols):
                 checked = st.checkbox('', value=sym in st.session_state.selected,
                                       key=f"chk_{page}_{sym}", label_visibility='collapsed')
             with title_col:
-                st.markdown(title_label)
+                st.markdown(title_html, unsafe_allow_html=True)
             if checked:
                 st.session_state.selected.add(sym)
             else:
