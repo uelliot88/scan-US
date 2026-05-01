@@ -37,34 +37,20 @@ st.markdown("""
         line-height: 1.6;
         padding: 4px 0 10px;
     }
+    .pagination-nav a {
+        color: #000000 !important;
+        text-decoration: none !important;
+        padding: 0 2px;
+    }
+    .pagination-nav a:hover {
+        text-decoration: underline !important;
+    }
     .pagination-nav .current-page {
         font-weight: 900;
         text-decoration: underline;
     }
     .pagination-nav .disabled-page {
         opacity: 0.45;
-    }
-    div:has(.pagination-nav-start) ~ [data-testid="stHorizontalBlock"] {
-        justify-content: flex-end;
-        gap: 14px;
-    }
-    div:has(.pagination-nav-start) ~ [data-testid="stHorizontalBlock"] [data-testid="column"] {
-        flex: 0 0 auto !important;
-        width: auto !important;
-        min-width: 0 !important;
-    }
-    div:has(.pagination-nav-start) ~ [data-testid="stHorizontalBlock"] button {
-        border: none !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        min-height: 0 !important;
-        padding: 0 2px !important;
-        line-height: 1.6 !important;
-        font-size: 1rem !important;
-    }
-    div:has(.pagination-nav-start) ~ [data-testid="stHorizontalBlock"] button:hover {
-        background: transparent !important;
-        text-decoration: underline !important;
     }
     .stock-title {
         position: relative;
@@ -237,11 +223,6 @@ def set_query_page(page_number):
         st.query_params['page'] = str(page_number)
     except AttributeError:
         st.experimental_set_query_params(page=page_number)
-
-def go_to_page(page_number):
-    st.session_state.current_page = page_number
-    set_query_page(page_number)
-    st.rerun()
 
 if 'current_page' not in st.session_state:
     st.session_state.current_page = 1
@@ -436,33 +417,29 @@ def get_page_range(current, total):
 
 page_range = get_page_range(page, total_pages)
 
-# 底部右對齊導覽：用 Streamlit 原生按鈕在原頁面換頁，再用 CSS 顯示為純文字
-nav_items = ['prev'] + page_range + ['next']
-_, nav_col = st.columns([1, 3])
-with nav_col:
-    st.markdown('<span class="pagination-nav-start"></span>', unsafe_allow_html=True)
-    nav_cols = st.columns([1] * len(nav_items), gap='small')
+# 底部右對齊導覽：純文字連結，target=_self 保持在同一個視窗切換
+nav_items = []
+if page > 1:
+    nav_items.append(f'<a href="?page={page - 1}" target="_self">◀ 前一頁</a>')
+else:
+    nav_items.append('<span class="disabled-page">◀ 前一頁</span>')
 
-    for idx, item in enumerate(nav_items):
-        with nav_cols[idx]:
-            if item == 'prev':
-                if page > 1:
-                    if st.button('◀ 前一頁', key='nav_prev'):
-                        go_to_page(page - 1)
-                else:
-                    st.markdown('<span class="pagination-nav disabled-page">◀ 前一頁</span>', unsafe_allow_html=True)
-            elif item == 'next':
-                if page < total_pages:
-                    if st.button('下一頁 ▶', key='nav_next'):
-                        go_to_page(page + 1)
-                else:
-                    st.markdown('<span class="pagination-nav disabled-page">下一頁 ▶</span>', unsafe_allow_html=True)
-            elif item == '...':
-                st.markdown('<span class="pagination-nav">…</span>', unsafe_allow_html=True)
-            elif item == page:
-                st.markdown(f'<span class="pagination-nav current-page">{item}</span>', unsafe_allow_html=True)
-            else:
-                if st.button(str(item), key=f'nav_p_{item}'):
-                    go_to_page(item)
+for p in page_range:
+    if p == '...':
+        nav_items.append('<span>…</span>')
+    elif p == page:
+        nav_items.append(f'<span class="current-page">{p}</span>')
+    else:
+        nav_items.append(f'<a href="?page={p}" target="_self">{p}</a>')
+
+if page < total_pages:
+    nav_items.append(f'<a href="?page={page + 1}" target="_self">下一頁 ▶</a>')
+else:
+    nav_items.append('<span class="disabled-page">下一頁 ▶</span>')
+
+st.markdown(
+    f'<nav class="pagination-nav">{"".join(nav_items)}</nav>',
+    unsafe_allow_html=True
+)
 
 st.markdown("<br>", unsafe_allow_html=True)
