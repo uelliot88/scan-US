@@ -276,35 +276,38 @@ def get_page_range(current, total):
 
 page_range = get_page_range(page, total_pages)
 
-# 上一頁 / 下一頁按鈕列
-prev_col, _, next_col = st.columns([1, 4, 1])
-with prev_col:
-    if st.button('◀  上一頁', disabled=(page == 1), key='nav_prev', use_container_width=True):
-        st.session_state.current_page = page - 1
-        st.rerun()
-with next_col:
-    if st.button('下一頁  ▶', disabled=(page == total_pages), key='nav_next', use_container_width=True):
-        st.session_state.current_page = page + 1
+# 底部單行導覽：◀前一頁  1 2 3 … 10  下一頁▶
+nav_widths = [2] + [1] * len(page_range) + [2]
+nav_cols = st.columns(nav_widths)
+
+with nav_cols[0]:
+    if st.button('◀ 前一頁', disabled=(page == 1), key='nav_prev', use_container_width=True):
+        new_page = page - 1
+        st.session_state.current_page = new_page
+        st.session_state['page_select'] = new_page
         st.rerun()
 
-# 頁碼列
-NUM_COLS = len(page_range)
-if NUM_COLS > 0:
-    page_cols = st.columns(NUM_COLS)
-    for idx, p in enumerate(page_range):
-        with page_cols[idx]:
-            if p == '...':
-                st.markdown("<div style='text-align:center; font-size:1rem; padding-top:4px;'>…</div>",
-                            unsafe_allow_html=True)
-            elif p == page:
-                st.markdown(
-                    f"<div style='text-align:center; font-weight:900; font-size:1.1rem; "
-                    f"padding-top:2px; border-bottom:3px solid #000; padding-bottom:2px;'>{p}</div>",
-                    unsafe_allow_html=True
-                )
-            else:
-                if st.button(str(p), key=f'nav_p_{p}', use_container_width=True):
-                    st.session_state.current_page = p
-                    st.rerun()
+for idx, p in enumerate(page_range):
+    with nav_cols[idx + 1]:
+        if p == '...':
+            st.markdown("<div style='text-align:center; padding-top:6px;'>…</div>", unsafe_allow_html=True)
+        elif p == page:
+            st.markdown(
+                f"<div style='text-align:center; font-weight:900; font-size:1.1rem; "
+                f"padding-top:4px; border-bottom:3px solid #000;'>{p}</div>",
+                unsafe_allow_html=True
+            )
+        else:
+            if st.button(str(p), key=f'nav_p_{p}', use_container_width=True):
+                st.session_state.current_page = p
+                st.session_state['page_select'] = p
+                st.rerun()
+
+with nav_cols[-1]:
+    if st.button('下一頁 ▶', disabled=(page == total_pages), key='nav_next', use_container_width=True):
+        new_page = page + 1
+        st.session_state.current_page = new_page
+        st.session_state['page_select'] = new_page
+        st.rerun()
 
 st.markdown("<br>", unsafe_allow_html=True)
