@@ -26,6 +26,22 @@ VOLUME_SURGE_RATIO = 1.3    # 量能增加倍數（近5日均量 ÷ 近20日均�
 INST_LOOKUP_DAYS = 7        # 法人資料回溯天數
 
 
+def load_concept_meta():
+    try:
+        with open('stock_concepts.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return {}
+
+    return {
+        'source': data.get('source', ''),
+        'latest_trade_date': data.get('latest_trade_date', ''),
+        'generated_at': data.get('generated_at', ''),
+        'theme_count': data.get('theme_count', 0),
+        'stock_count': data.get('stock_count', 0),
+    }
+
+
 def get_tw_tickers():
     """抓取台灣上市(TW)與上櫃(TWO)股票代號，回傳 (tickers list, name_map dict, sector_map dict)"""
     print("正在獲取台股上市櫃清單...")
@@ -461,6 +477,7 @@ def main():
         'total_symbols_found': len(final_payload),
         'name_map':   {k: name_map.get(k, '')   for k in final_payload},
         'sector_map': {k: sector_map.get(k, '') for k in final_payload},
+        'concept_meta': load_concept_meta(),
         'results': final_payload
     }
 

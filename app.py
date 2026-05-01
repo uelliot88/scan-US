@@ -102,6 +102,16 @@ def load_stock_notes():
     except FileNotFoundError:
         return {}
 
+def load_stock_concepts():
+    try:
+        with open('stock_concepts.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return {}
+
+    concepts = data.get('stock_concepts', data) if isinstance(data, dict) else {}
+    return concepts if isinstance(concepts, dict) else {}
+
 data_store = load_analysis_results()
 
 if not data_store or 'results' not in data_store:
@@ -129,6 +139,7 @@ name_map = data_store.get('name_map', {})
 sector_map = data_store.get('sector_map', {})
 business_map = data_store.get('business_map', {})
 stock_notes = load_stock_notes()
+stock_concepts = load_stock_concepts()
 
 def get_stock_note(symbol, code, sector):
     note = (
@@ -139,9 +150,17 @@ def get_stock_note(symbol, code, sector):
     )
     if note:
         return str(note)
+    if stock_concepts.get(symbol) or stock_concepts.get(code):
+        return ''
     if sector:
-        return f"主要營業項目：尚未建立備註\n產業別：{sector}"
-    return "主要營業項目：尚未建立備註"
+        return f"產業別：{sector}"
+    return ""
+
+def get_stock_concepts(symbol, code):
+    concepts = stock_concepts.get(symbol) or stock_concepts.get(code) or []
+    if isinstance(concepts, str):
+        concepts = [concepts]
+    return [str(item).strip() for item in concepts if str(item).strip()]
 
 # 篩選列
 filter_col1, filter_col2 = st.columns(2)
@@ -322,7 +341,15 @@ for i, sym in enumerate(page_symbols):
         sector = k_data.get('sector', '')
         stock_name = name_map.get(sym, '')
         stock_note = get_stock_note(sym, code, sector)
-        stock_note_html = html.escape(stock_note).replace('\n', '<br>')
+        concepts = get_stock_concepts(sym, code)
+        tooltip_lines = []
+        if stock_note:
+            tooltip_lines.append(stock_note)
+        if concepts:
+            tooltip_lines.append(f"族群標籤：{'、'.join(concepts)}")
+        if sector and not any(line.startswith('產業別：') for line in tooltip_lines):
+            tooltip_lines.append(f"產業別：{sector}")
+        stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無族群標籤').replace('\n', '<br>')
         title_text = (
             f"{code} {stock_name}"
             f" {'｜漲後整理' if k_data.get('type')=='A' else '｜多頭排列'}"
