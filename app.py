@@ -5,6 +5,8 @@ from plotly.subplots import make_subplots
 import json
 import html
 
+APP_VERSION = "1.0"
+
 # ==========================================
 # 頁面與底色初始化
 # ==========================================
@@ -127,7 +129,7 @@ st.markdown(f"""
     <div style='display: flex; justify-content: space-between; align-items: baseline;
                 border-bottom: 2px solid #000000; padding-top: 25px; padding-bottom: 5px; margin-bottom: 10px;'>
         <div style='font-size: 2.2rem; font-weight: 900; color: #000000; line-height: 1.2;'>台股掃圖</div>
-        <div style='font-size: 0.9rem; font-weight: 800; color: #000000;'>更新：{last_updated}</div>
+        <div style='font-size: 0.9rem; font-weight: 800; color: #000000;'>版本：{APP_VERSION} ｜ 更新：{last_updated}</div>
     </div>
     """, unsafe_allow_html=True)
 
