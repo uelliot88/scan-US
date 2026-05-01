@@ -27,31 +27,29 @@ st.markdown("""
     [data-testid="stSidebar"] { display: none; }
     .block-container { padding-top: 1rem; padding-bottom: 0rem; }
 
-    /* 底部分頁導覽：所有換頁控制改成純文字外觀 */
-    div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
-      > [data-testid="column"]
-      button {
-        border: none !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        min-height: 0px !important;
-        padding: 2px 5px !important;
-        font-size: 1rem !important;
-        line-height: 1.6 !important;
-        cursor: pointer !important;
+    .pagination-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 14px;
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 4px 0 10px;
     }
-    div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
-      > [data-testid="column"]
-      button:hover {
-        background: #eeeeee !important;
-        border-radius: 3px !important;
+    .pagination-nav a {
+        color: #000000 !important;
+        text-decoration: none !important;
+        padding: 0 2px;
     }
-    div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
-      > [data-testid="column"]
-      button:disabled {
-        background: transparent !important;
-        opacity: 0.45 !important;
-        cursor: default !important;
+    .pagination-nav a:hover {
+        text-decoration: underline !important;
+    }
+    .pagination-nav .current-page {
+        font-weight: 900;
+        text-decoration: underline;
+    }
+    .pagination-nav .disabled-page {
+        opacity: 0.45;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -134,8 +132,33 @@ PAGE_SIZE = 40
 total = len(symbol_list)
 total_pages = (total + PAGE_SIZE - 1) // PAGE_SIZE
 
+def get_query_page():
+    try:
+        raw_page = st.query_params.get('page')
+    except AttributeError:
+        raw_page = st.experimental_get_query_params().get('page')
+
+    if isinstance(raw_page, list):
+        raw_page = raw_page[0] if raw_page else None
+
+    try:
+        return int(raw_page)
+    except (TypeError, ValueError):
+        return None
+
+def set_query_page(page_number):
+    try:
+        st.query_params['page'] = str(page_number)
+    except AttributeError:
+        st.experimental_set_query_params(page=page_number)
+
 if 'current_page' not in st.session_state:
     st.session_state.current_page = 1
+
+query_page = get_query_page()
+if query_page is not None:
+    st.session_state.current_page = query_page
+
 st.session_state.current_page = max(1, min(st.session_state.current_page, total_pages))
 
 col_info, col_page = st.columns([3, 1])
@@ -144,6 +167,8 @@ with col_page:
                         index=st.session_state.current_page - 1,
                         label_visibility='collapsed')
     st.session_state.current_page = page
+    if page != query_page:
+        set_query_page(page)
 with col_info:
     st.markdown(f"<div style='font-size:0.9rem; color:#000; padding-top:6px;'>共 {total} 檔，第 {page}/{total_pages} 頁</div>", unsafe_allow_html=True)
 
@@ -303,35 +328,29 @@ def get_page_range(current, total):
 
 page_range = get_page_range(page, total_pages)
 
-# 底部右對齊導覽：◀前一頁  1 2 3 … 10  下一頁▶
-_, nav_col = st.columns([1, 3])
-with nav_col:
-    st.markdown('<span class="page-nav-start"></span>', unsafe_allow_html=True)
-    nav_widths = [2] + [1] * len(page_range) + [2]
-    nav_cols = st.columns(nav_widths)
+# 底部右對齊導覽：用純文字連結避免 Streamlit 按鈕外框
+nav_items = []
+if page > 1:
+    nav_items.append(f'<a href="?page={page - 1}">◀ 前一頁</a>')
+else:
+    nav_items.append('<span class="disabled-page">◀ 前一頁</span>')
 
-    with nav_cols[0]:
-        if st.button('◀ 前一頁', disabled=(page == 1), key='nav_prev'):
-            st.session_state.current_page = page - 1
-            st.rerun()
+for p in page_range:
+    if p == '...':
+        nav_items.append('<span>…</span>')
+    elif p == page:
+        nav_items.append(f'<span class="current-page">{p}</span>')
+    else:
+        nav_items.append(f'<a href="?page={p}">{p}</a>')
 
-    for idx, p in enumerate(page_range):
-        with nav_cols[idx + 1]:
-            if p == '...':
-                st.markdown("<div style='text-align:center;padding-top:6px'>…</div>", unsafe_allow_html=True)
-            elif p == page:
-                st.markdown(
-                    f"<div style='text-align:center;font-weight:900;text-decoration:underline;padding-top:5px'>{p}</div>",
-                    unsafe_allow_html=True
-                )
-            else:
-                if st.button(str(p), key=f'nav_p_{p}'):
-                    st.session_state.current_page = p
-                    st.rerun()
+if page < total_pages:
+    nav_items.append(f'<a href="?page={page + 1}">下一頁 ▶</a>')
+else:
+    nav_items.append('<span class="disabled-page">下一頁 ▶</span>')
 
-    with nav_cols[-1]:
-        if st.button('下一頁 ▶', disabled=(page == total_pages), key='nav_next'):
-            st.session_state.current_page = page + 1
-            st.rerun()
+st.markdown(
+    f'<nav class="pagination-nav">{"".join(nav_items)}</nav>',
+    unsafe_allow_html=True
+)
 
 st.markdown("<br>", unsafe_allow_html=True)
