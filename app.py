@@ -27,9 +27,9 @@ st.markdown("""
     [data-testid="stSidebar"] { display: none; }
     .block-container { padding-top: 1rem; padding-bottom: 0rem; }
 
-    /* 頁碼按鈕去除方框，保留點擊功能 */
+    /* 底部分頁導覽：所有換頁控制改成純文字外觀 */
     div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
-      > [data-testid="column"]:not(:first-child):not(:last-child)
+      > [data-testid="column"]
       button {
         border: none !important;
         background: transparent !important;
@@ -38,12 +38,20 @@ st.markdown("""
         padding: 2px 5px !important;
         font-size: 1rem !important;
         line-height: 1.6 !important;
+        cursor: pointer !important;
     }
     div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
-      > [data-testid="column"]:not(:first-child):not(:last-child)
+      > [data-testid="column"]
       button:hover {
         background: #eeeeee !important;
         border-radius: 3px !important;
+    }
+    div:has(.page-nav-start) ~ [data-testid="stHorizontalBlock"]
+      > [data-testid="column"]
+      button:disabled {
+        background: transparent !important;
+        opacity: 0.45 !important;
+        cursor: default !important;
     }
     </style>
     """, unsafe_allow_html=True)
