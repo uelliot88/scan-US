@@ -7,11 +7,15 @@ echo ================================================
 echo  Taiwan Stock Scanner
 echo ================================================
 echo.
-echo [1/4] Updating concept tags...
-venv\Scripts\python update_stock_concepts.py
-if errorlevel 1 (
-    echo.
-    echo [WARNING] Concept tag update failed. Continuing with existing local concept data.
+echo [1/4] Updating market themes...
+if exist update_stock_concepts.py (
+    venv\Scripts\python update_stock_concepts.py
+    if errorlevel 1 (
+        echo.
+        echo [WARNING] Market theme update failed. Continuing with existing local market theme data.
+    )
+) else (
+    echo       Local-only updater not found. Reusing existing stock_concepts.json.
 )
 
 echo.

@@ -1,9 +1,4 @@
 {
-  "source": "https://twstockflow.aihost.dev",
-  "source_endpoints": [
-    "https://twstockflow.aihost.dev/api/v1/themes/list?markets=tse,otc",
-    "https://twstockflow.aihost.dev/api/v1/themes/holdings-watchlist?stock_ids=...&window=1d&markets=tse,otc"
-  ],
   "markets": "tse,otc",
   "latest_trade_date": "2026-04-30",
   "generated_at": "2026-05-01 13:25:42",

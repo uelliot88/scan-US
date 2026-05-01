@@ -34,7 +34,6 @@ def load_concept_meta():
         return {}
 
     return {
-        'source': data.get('source', ''),
         'latest_trade_date': data.get('latest_trade_date', ''),
         'generated_at': data.get('generated_at', ''),
         'theme_count': data.get('theme_count', 0),

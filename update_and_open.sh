@@ -5,17 +5,6 @@ echo "================================================"
 echo " Taiwan Stock Scanner"
 echo "================================================"
 echo ""
-echo "[1/4] Updating concept tags..."
-venv/bin/python update_stock_concepts.py
-if [ $? -ne 0 ]; then
-    echo ""
-    echo "[WARNING] Concept tag update failed. Continuing with existing local concept data."
-fi
-
-echo ""
-echo "[2/4] Updating data (takes ~10 mins)..."
-echo "      Downloading ~1967 stocks in 40 batches."
-echo ""
 
 if [ ! -f "venv/bin/python" ]; then
     echo "[ERROR] venv not found. Please run setup first:"
@@ -24,6 +13,22 @@ if [ ! -f "venv/bin/python" ]; then
     read -p "Press Enter to close..."
     exit 1
 fi
+
+echo "[1/4] Updating market themes..."
+if [ -f "update_stock_concepts.py" ]; then
+    venv/bin/python update_stock_concepts.py
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "[WARNING] Market theme update failed. Continuing with existing local market theme data."
+    fi
+else
+    echo "      Local-only updater not found. Reusing existing stock_concepts.json."
+fi
+
+echo ""
+echo "[2/4] Updating data (takes ~10 mins)..."
+echo "      Downloading ~1967 stocks in 40 batches."
+echo ""
 
 venv/bin/python update_data.py
 if [ $? -ne 0 ]; then

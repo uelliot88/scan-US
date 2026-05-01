@@ -5,3 +5,5 @@ __pycache__/
 .claude/
 *.png
 *.jpg
+update_stock_concepts.py
+本地市場主題更新說明.md
