@@ -1,26 +1,15 @@
 @echo off
 chcp 65001 >nul
-title Taiwan Stock Scanner
+title US Stock Scanner
 cd /d "%~dp0"
 
 echo ================================================
-echo  Taiwan Stock Scanner
+echo  US Stock Scanner
 echo ================================================
 echo.
-echo [1/4] Updating market themes...
-if exist update_stock_concepts.py (
-    venv\Scripts\python update_stock_concepts.py
-    if errorlevel 1 (
-        echo.
-        echo [WARNING] Market theme update failed. Continuing with existing local market theme data.
-    )
-) else (
-    echo       Local-only updater not found. Reusing existing stock_concepts.json.
-)
-
-echo.
-echo [2/4] Updating data (takes ~10 mins)...
-echo       Downloading 1967 stocks in 40 batches.
+echo [1/3] Updating US market data...
+echo       Universe: Nasdaq screener
+echo       Price data: Yahoo Finance via yfinance
 echo.
 
 venv\Scripts\python update_data.py
@@ -32,9 +21,9 @@ if errorlevel 1 (
 )
 
 echo.
-echo [3/4] Pushing to GitHub...
+echo [2/3] Pushing data to GitHub...
 git add uptrend_results.json stock_concepts.json
-git commit -m "update data"
+git commit -m "update US data"
 git push
 if errorlevel 1 (
     echo.
@@ -42,12 +31,11 @@ if errorlevel 1 (
 )
 
 echo.
-echo [4/4] Opening browser...
-start "" "https://scan-tw.streamlit.app/"
+echo [3/3] Opening local Streamlit app...
+venv\Scripts\streamlit run app.py
 
 echo.
 echo ================================================
-echo  Done! Browser opened.
-echo  Press any key to close this window.
+echo  Done.
 echo ================================================
 pause

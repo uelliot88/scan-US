@@ -10,7 +10,7 @@ APP_VERSION = "1.0"
 # ==========================================
 # 頁面與底色初始化
 # ==========================================
-st.set_page_config(page_title="台股掃圖", layout="wide")
+st.set_page_config(page_title="美股掃圖", layout="wide")
 
 st.markdown("""
     <style>
@@ -128,7 +128,7 @@ last_updated = data_store.get('last_updated', '未知')
 st.markdown(f"""
     <div style='display: flex; justify-content: space-between; align-items: baseline;
                 border-bottom: 2px solid #000000; padding-top: 25px; padding-bottom: 5px; margin-bottom: 10px;'>
-        <div style='font-size: 2.2rem; font-weight: 900; color: #000000; line-height: 1.2;'>台股掃圖</div>
+        <div style='font-size: 2.2rem; font-weight: 900; color: #000000; line-height: 1.2;'>美股掃圖</div>
         <div style='font-size: 0.9rem; font-weight: 800; color: #000000;'>版本：{APP_VERSION} ｜ 更新：{last_updated}</div>
     </div>
     """, unsafe_allow_html=True)
@@ -139,6 +139,8 @@ st.markdown(f"""
 all_results = data_store['results']
 name_map = data_store.get('name_map', {})
 sector_map = data_store.get('sector_map', {})
+industry_map = data_store.get('industry_map', {})
+country_map = data_store.get('country_map', {})
 business_map = data_store.get('business_map', {})
 stock_notes = load_stock_notes()
 stock_concepts = load_stock_concepts()
@@ -154,9 +156,16 @@ def get_stock_note(symbol, code, sector):
         return str(note)
     if stock_concepts.get(symbol) or stock_concepts.get(code):
         return ''
+    industry = industry_map.get(symbol) or industry_map.get(code)
+    country = country_map.get(symbol) or country_map.get(code)
+    meta = []
     if sector:
-        return f"產業別：{sector}"
-    return ""
+        meta.append(f"Sector：{sector}")
+    if industry:
+        meta.append(f"Industry：{industry}")
+    if country:
+        meta.append(f"Country：{country}")
+    return " ｜ ".join(meta)
 
 def get_stock_concepts(symbol, code):
     concepts = stock_concepts.get(symbol) or stock_concepts.get(code) or []
@@ -174,15 +183,15 @@ with filter_col1:
 
 with filter_col2:
     all_sectors = sorted({v for v in sector_map.values() if v})
-    sector_options = ['全部產業'] + all_sectors
-    selected_sector = st.selectbox('產業別', sector_options, index=0)
+    sector_options = ['全部 Sector'] + all_sectors
+    selected_sector = st.selectbox('Sector', sector_options, index=0)
 
 if selected_type:
     filtered = {k: v for k, v in all_results.items() if v.get('type') == selected_type}
 else:
     filtered = all_results
 
-if selected_sector != '全部產業':
+if selected_sector != '全部 Sector':
     filtered = {k: v for k, v in filtered.items() if v.get('sector') == selected_sector}
 
 symbol_list = sorted(list(filtered.keys()))
@@ -275,8 +284,7 @@ dl_col, clr_col, _ = st.columns([2, 1, 4])
 with dl_col:
     if sel_count > 0:
         tv_text = ','.join(
-            ('TWSE:' if s.endswith('.TW') else 'TPEX:') + s.replace('.TWO', '').replace('.TW', '')
-            for s in sorted(st.session_state.selected)
+            s for s in sorted(st.session_state.selected)
         )
         st.download_button(
             f'⬇ 下載收藏清單（{sel_count} 檔）',
@@ -359,8 +367,9 @@ for i, sym in enumerate(page_symbols):
         if i % 2 == 0:
             cols = st.columns(2)
 
-        code = sym.replace('.TWO', '').replace('.TW', '')
+        code = sym
         sector = k_data.get('sector', '')
+        industry = k_data.get('industry', '')
         stock_name = name_map.get(sym, '').rstrip('*')
         stock_note = get_stock_note(sym, code, sector)
         concepts = get_stock_concepts(sym, code)
@@ -368,17 +377,18 @@ for i, sym in enumerate(page_symbols):
         if stock_note:
             tooltip_lines.append(stock_note)
         if concepts:
-            tooltip_lines.append(f"市場主題：{'、'.join(concepts)}")
-        if sector and not any(line.startswith('產業別：') for line in tooltip_lines):
-            tooltip_lines.append(f"產業別：{sector}")
-        stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無市場主題').replace('\n', '<br>')
+            tooltip_lines.append(f"Market themes：{'、'.join(concepts)}")
+        if sector and not any(line.startswith('Sector：') for line in tooltip_lines):
+            tooltip_lines.append(f"Sector：{sector}")
+        if industry and not any('Industry：' in line for line in tooltip_lines):
+            tooltip_lines.append(f"Industry：{industry}")
+        stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無產業/主題資料').replace('\n', '<br>')
         title_text = (
             f"{code} {stock_name}"
             f" {'｜漲後整理' if k_data.get('type')=='A' else '｜多頭排列'}"
             f"{f'  [{sector}]' if sector else ''}"
-            f"{'  🔵外資' if k_data.get('inst_foreign') else ''}"
-            f"{'  🟢投信' if k_data.get('inst_trust') else ''}"
-            f"{'  VOL🔺' if k_data.get('vol_surge') else ''}"
+            f"{'  RS↑' if k_data.get('rs_spy') else ''}"
+            f"{'  VOL↑' if k_data.get('vol_surge') else ''}"
         )
         title_html = (
             '<span class="stock-title">'
