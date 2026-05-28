@@ -104,13 +104,16 @@ def load_stock_notes():
     except FileNotFoundError:
         return {}
 
-def load_stock_concepts():
+def load_stock_concepts_payload():
     try:
         with open('stock_concepts.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
     except FileNotFoundError:
         return {}
+    return data if isinstance(data, dict) else {}
 
+def load_stock_concepts():
+    data = load_stock_concepts_payload()
     concepts = data.get('stock_concepts', data) if isinstance(data, dict) else {}
     return concepts if isinstance(concepts, dict) else {}
 
@@ -143,7 +146,10 @@ industry_map = data_store.get('industry_map', {})
 country_map = data_store.get('country_map', {})
 business_map = data_store.get('business_map', {})
 stock_notes = load_stock_notes()
+stock_concepts_payload = load_stock_concepts_payload()
 stock_concepts = load_stock_concepts()
+stock_theme_strength = stock_concepts_payload.get('theme_strength', {})
+stock_theme_details = stock_concepts_payload.get('theme_details', {})
 
 SECTOR_ZH = {
     'Basic Materials': '原物料',
@@ -319,8 +325,14 @@ def get_stock_concepts(symbol, code):
         concepts = [concepts]
     return [str(item).strip() for item in concepts if str(item).strip()]
 
+def get_theme_strength(symbol, code):
+    try:
+        return float(stock_theme_strength.get(symbol, stock_theme_strength.get(code, 0)) or 0)
+    except (TypeError, ValueError):
+        return 0
+
 # 篩選列
-filter_col1, filter_col2 = st.columns(2)
+filter_col1, filter_col2, filter_col3 = st.columns(3)
 
 with filter_col1:
     type_options = {'全部': None, '漲後整理（型態A）': 'A', '多頭排列（型態B）': 'B'}
@@ -332,6 +344,16 @@ with filter_col2:
     sector_options = ['全部 Sector'] + all_sectors
     selected_sector = st.selectbox('Sector', sector_options, index=0)
 
+with filter_col3:
+    all_themes = sorted({
+        theme
+        for themes in stock_concepts.values()
+        for theme in (themes if isinstance(themes, list) else [themes])
+        if str(theme).strip()
+    })
+    theme_options = ['全部主題'] + all_themes
+    selected_theme = st.selectbox('市場主題', theme_options, index=0)
+
 if selected_type:
     filtered = {k: v for k, v in all_results.items() if v.get('type') == selected_type}
 else:
@@ -339,6 +361,12 @@ else:
 
 if selected_sector != '全部 Sector':
     filtered = {k: v for k, v in filtered.items() if v.get('sector') == selected_sector}
+
+if selected_theme != '全部主題':
+    filtered = {
+        k: v for k, v in filtered.items()
+        if selected_theme in get_stock_concepts(k, k)
+    }
 
 symbol_list = sorted(list(filtered.keys()))
 
@@ -523,7 +551,7 @@ for i, sym in enumerate(page_symbols):
         if stock_note:
             tooltip_lines.append(stock_note)
         if concepts:
-            tooltip_lines.append(f"Market themes：{'、'.join(concepts)}")
+            tooltip_lines.append(f"市場主題：{'、'.join(concepts)}")
         if sector and not any(line.startswith('產業類別：') for line in tooltip_lines):
             tooltip_lines.append(f"產業類別：{translate_sector(sector)}")
         if industry and not any('細分產業：' in line for line in tooltip_lines):
@@ -535,6 +563,7 @@ for i, sym in enumerate(page_symbols):
             f"{f'  [{sector}]' if sector else ''}"
             f"{'  RS↑' if k_data.get('rs_spy') else ''}"
             f"{'  VOL↑' if k_data.get('vol_surge') else ''}"
+            f"{'  Theme↑' if get_theme_strength(sym, code) > 0 else ''}"
         )
         title_html = (
             '<span class="stock-title">'

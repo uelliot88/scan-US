@@ -31,6 +31,9 @@ NASDAQ_SCREENER_URL = (
     'https://api.nasdaq.com/api/screener/stocks'
     '?tableonly=true&limit=25&offset=0&download=true'
 )
+USSTOCKFLOW_BASE_URL = 'https://usstockflow.aihost.dev'
+USSTOCKFLOW_API_BASE = f'{USSTOCKFLOW_BASE_URL}/api/v1'
+MAX_THEMES_PER_STOCK = int(os.getenv('MAX_THEMES_PER_STOCK', '6'))
 
 
 def load_concept_meta():
@@ -287,6 +290,156 @@ def clean_downloaded_df(raw_df):
     return clean_df
 
 
+def fetch_json(session, url, params=None, timeout=30):
+    resp = session.get(url, params=params, timeout=timeout)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def build_usstockflow_concepts(symbols):
+    """Build a local market-topic cache from USStockFlow for screened symbols."""
+    symbol_set = {str(symbol).upper() for symbol in symbols}
+    stock_topics = {symbol: [] for symbol in symbol_set}
+    theme_strength = {}
+    theme_details = {symbol: [] for symbol in symbol_set}
+    latest_trade_date = ''
+
+    if not symbol_set:
+        return {
+            'source': USSTOCKFLOW_BASE_URL + '/',
+            'latest_trade_date': '',
+            'generated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'theme_count': 0,
+            'stock_count': 0,
+            'stock_concepts': {},
+            'theme_strength': {},
+            'theme_details': {},
+        }
+
+    session = requests.Session()
+    try:
+        latest = fetch_json(session, f'{USSTOCKFLOW_API_BASE}/meta/latest')
+        latest_trade_date = latest.get('latest_trade_date') or latest.get('trade_date') or ''
+        topics_payload = fetch_json(session, f'{USSTOCKFLOW_API_BASE}/market-topics/list')
+        topics = topics_payload.get('topics') or topics_payload.get('themes') or []
+    except Exception as exc:
+        print(f'[主題] USStockFlow 主題資料取得失敗：{exc}')
+        return None
+
+    usable_topics = [
+        topic for topic in topics
+        if topic.get('topic_slug') and topic.get('has_live_data') and topic.get('rankable', True)
+    ]
+    print(f'[主題] 正在整理 USStockFlow 主題資料，共 {len(usable_topics)} 個主題...')
+
+    matched_theme_count = 0
+    for index, topic in enumerate(usable_topics, start=1):
+        slug = topic.get('topic_slug') or topic.get('theme_slug') or topic.get('theme_id')
+        topic_name = (
+            topic.get('topic_name')
+            or topic.get('theme_name')
+            or topic.get('topic_name_en')
+            or slug
+        )
+        topic_name_en = topic.get('topic_name_en') or topic.get('theme_name_en') or ''
+        avg_change_pct = topic.get('avg_change_pct')
+        top_n = int(
+            max(
+                topic.get('live_constituent_count') or 0,
+                topic.get('constituent_count') or 0,
+                topic.get('stock_count') or 0,
+                50,
+            )
+        )
+        top_n = min(max(top_n, 50), 1000)
+
+        rows = []
+        last_error = None
+        fallback_sizes = [top_n, 500, 100, 30]
+        for fallback_top_n in dict.fromkeys(fallback_sizes):
+            try:
+                payload = fetch_json(
+                    session,
+                    f'{USSTOCKFLOW_API_BASE}/market-topics/{slug}/drill-down',
+                    params={'top_n': fallback_top_n},
+                    timeout=30,
+                )
+                rows = payload.get('constituents') or payload.get('rows') or []
+                break
+            except Exception as exc:
+                last_error = exc
+                if '422' not in str(exc):
+                    break
+        if not rows:
+            print(f'[主題] {index}/{len(usable_topics)} {slug} 取得失敗：{last_error}')
+            continue
+
+        matched_in_topic = False
+        for row in rows:
+            symbol = normalize_yahoo_symbol(row.get('symbol', ''))
+            if symbol not in symbol_set:
+                continue
+            if topic_name not in stock_topics[symbol]:
+                stock_topics[symbol].append(topic_name)
+            try:
+                strength = float(avg_change_pct)
+            except (TypeError, ValueError):
+                strength = None
+            if strength is not None:
+                theme_strength[symbol] = max(theme_strength.get(symbol, -999.0), strength)
+            theme_details[symbol].append({
+                'name': topic_name,
+                'name_en': topic_name_en,
+                'slug': slug,
+                'chain_group': topic.get('chain_group') or '',
+                'chain_stage': topic.get('chain_stage') or '',
+                'avg_change_pct': strength,
+            })
+            matched_in_topic = True
+
+        if matched_in_topic:
+            matched_theme_count += 1
+        time.sleep(0.1)
+
+    for symbol, details in theme_details.items():
+        details.sort(
+            key=lambda item: (
+                item.get('avg_change_pct') is not None,
+                item.get('avg_change_pct') if item.get('avg_change_pct') is not None else -999.0,
+            ),
+            reverse=True,
+        )
+        theme_details[symbol] = details[:MAX_THEMES_PER_STOCK]
+        stock_topics[symbol] = [item['name'] for item in theme_details[symbol]]
+
+    stock_topics = {symbol: topics for symbol, topics in stock_topics.items() if topics}
+    theme_strength = {symbol: round(value, 2) for symbol, value in theme_strength.items()}
+    theme_details = {symbol: details for symbol, details in theme_details.items() if details}
+
+    return {
+        'source': USSTOCKFLOW_BASE_URL + '/',
+        'latest_trade_date': latest_trade_date,
+        'generated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'theme_count': matched_theme_count,
+        'stock_count': len(stock_topics),
+        'stock_concepts': stock_topics,
+        'theme_strength': theme_strength,
+        'theme_details': theme_details,
+    }
+
+
+def write_stock_concepts(concept_payload):
+    if not concept_payload:
+        return
+    with open('stock_concepts.json', 'w', encoding='utf-8') as f:
+        json.dump(concept_payload, f, ensure_ascii=False, indent=2)
+    print(
+        f"[主題] 已更新 stock_concepts.json："
+        f"{concept_payload.get('stock_count', 0)} 檔，"
+        f"{concept_payload.get('theme_count', 0)} 個相關主題"
+    )
+
+
 def main():
     tickers, name_map, sector_map, industry_map, country_map = get_us_tickers()
     if not tickers:
@@ -366,6 +519,9 @@ def main():
         except Exception:
             failed_count += 1
             continue
+
+    concept_payload = build_usstockflow_concepts(final_payload.keys())
+    write_stock_concepts(concept_payload)
 
     output = {
         'market': 'US',

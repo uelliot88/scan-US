@@ -1,8 +1,5730 @@
 {
   "source": "https://usstockflow.aihost.dev/",
-  "latest_trade_date": "",
-  "generated_at": "",
-  "theme_count": 0,
-  "stock_count": 0,
-  "stock_concepts": {}
+  "latest_trade_date": "2026-05-28",
+  "generated_at": "2026-05-28 21:33:18",
+  "theme_count": 76,
+  "stock_count": 265,
+  "stock_concepts": {
+    "STRL": [
+      "國防軍工",
+      "美國基礎建設"
+    ],
+    "DFTX": [
+      "生技",
+      "製藥"
+    ],
+    "CWEN": [
+      "太陽能"
+    ],
+    "LTRX": [
+      "智慧移動"
+    ],
+    "UMBF": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "CMI": [
+      "智慧移動",
+      "氫能經濟"
+    ],
+    "ADI": [
+      "太空經濟",
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "PTEN": [
+      "油氣探勘生產",
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "ACRS": [
+      "生技"
+    ],
+    "BIIB": [
+      "腫瘤免疫療法",
+      "生技",
+      "生技（廣義）"
+    ],
+    "FAF": [
+      "保險業（廣義）"
+    ],
+    "CGNX": [
+      "機器人與自動化"
+    ],
+    "MASI": [
+      "生技"
+    ],
+    "AESI": [
+      "油氣探勘生產"
+    ],
+    "SNEX": [
+      "資本市場業者"
+    ],
+    "WMB": [
+      "能源中游（MLP）",
+      "能源"
+    ],
+    "NOV": [
+      "油田服務"
+    ],
+    "STT": [
+      "資本市場業者"
+    ],
+    "JBL": [
+      "3D 列印與積層製造",
+      "電子零組件"
+    ],
+    "FFBC": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "CFFN": [
+      "地區銀行"
+    ],
+    "INTC": [
+      "智慧移動",
+      "社群情緒領頭羊（量化）",
+      "電動車與自駕",
+      "資料中心 REITs",
+      "AI（廣義）",
+      "半導體"
+    ],
+    "SEIC": [
+      "資本市場業者"
+    ],
+    "BEN": [
+      "資本市場業者"
+    ],
+    "LASR": [
+      "半導體"
+    ],
+    "ICHR": [
+      "先進封裝載板與材料",
+      "先進封裝製程機台",
+      "半導體設備產業"
+    ],
+    "TGT": [
+      "零售業（廣義）"
+    ],
+    "LPTH": [
+      "半導體"
+    ],
+    "VLO": [
+      "石化",
+      "能源",
+      "油氣探勘生產"
+    ],
+    "AMBQ": [
+      "半導體"
+    ],
+    "CELC": [
+      "醫療",
+      "生技（廣義）"
+    ],
+    "VIAV": [
+      "半導體"
+    ],
+    "ON": [
+      "智慧移動",
+      "電動車與自駕",
+      "半導體",
+      "半導體（廣義）",
+      "量子計算"
+    ],
+    "FTV": [
+      "美國基礎建設"
+    ],
+    "DELL": [
+      "區塊鏈基礎建設",
+      "社群情緒領頭羊（量化）"
+    ],
+    "KNSA": [
+      "生技"
+    ],
+    "VSAT": [
+      "太空經濟",
+      "電子零組件"
+    ],
+    "FFIV": [
+      "資安防護"
+    ],
+    "AMAT": [
+      "先進封裝製程機台",
+      "半導體設備產業",
+      "半導體設備",
+      "半導體（廣義）"
+    ],
+    "TUSK": [
+      "油田服務"
+    ],
+    "AKAM": [
+      "雲端 SaaS",
+      "資安防護"
+    ],
+    "EQIX": [
+      "資料中心 REITs",
+      "工業 REITs"
+    ],
+    "TRGP": [
+      "能源中游（MLP）",
+      "能源"
+    ],
+    "TVTX": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "CNC": [
+      "醫療"
+    ],
+    "VCTR": [
+      "資本市場業者"
+    ],
+    "CENX": [
+      "美國基礎建設"
+    ],
+    "WTTR": [
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "PUBM": [
+      "雲端 SaaS"
+    ],
+    "MRK": [
+      "生技",
+      "製藥"
+    ],
+    "NWBI": [
+      "地區銀行"
+    ],
+    "BLBD": [
+      "智慧移動"
+    ],
+    "CIEN": [
+      "高速光通訊與網通"
+    ],
+    "HASI": [
+      "太陽能產業",
+      "太陽能"
+    ],
+    "KLAC": [
+      "電子零組件",
+      "半導體設備產業",
+      "先進封裝量測自動化",
+      "半導體設備",
+      "半導體（廣義）"
+    ],
+    "VRT": [
+      "資料中心電力與散熱"
+    ],
+    "MXL": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "AME": [
+      "3D 列印與積層製造"
+    ],
+    "VECO": [
+      "先進封裝製程機台",
+      "半導體設備產業",
+      "半導體設備"
+    ],
+    "CPRX": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "CFG": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "TTMI": [
+      "太空經濟",
+      "電子零組件"
+    ],
+    "AEHR": [
+      "電子零組件",
+      "半導體設備產業",
+      "先進封裝量測自動化"
+    ],
+    "MKSI": [
+      "先進封裝載板與材料",
+      "先進封裝製程機台",
+      "半導體設備產業"
+    ],
+    "MU": [
+      "HBM 與 AI 記憶體",
+      "記憶體晶片",
+      "社群情緒領頭羊（量化）",
+      "資料中心 REITs",
+      "AI（廣義）",
+      "半導體"
+    ],
+    "PFS": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "GOOGL": [
+      "社群媒體",
+      "社群情緒領頭羊（量化）",
+      "Magnificent 7 大型 AI 股",
+      "AI 雲端資本支出",
+      "電動車與自駕",
+      "生成式 AI"
+    ],
+    "TER": [
+      "ARK 顛覆性創新（ARKK）",
+      "太空與國防創新（ARKX）",
+      "自動駕駛與機器人（ARKQ）",
+      "電子零組件",
+      "半導體設備產業",
+      "先進封裝量測自動化"
+    ],
+    "BCRX": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "BNY": [
+      "資本市場業者",
+      "銀行業（廣義）"
+    ],
+    "GFS": [
+      "半導體"
+    ],
+    "HUT": [
+      "比特幣礦工",
+      "加密資產基礎設施",
+      "數位轉型（加密）",
+      "區塊鏈基礎建設",
+      "軟體應用",
+      "AI（廣義）"
+    ],
+    "BE": [
+      "太陽能產業",
+      "太陽能",
+      "社群情緒領頭羊（量化）",
+      "鋰電池供應鏈",
+      "氫能經濟",
+      "電動車與自駕"
+    ],
+    "RNST": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "CZR": [
+      "運動博弈",
+      "休閒娛樂"
+    ],
+    "PNC": [
+      "銀行業（廣義）"
+    ],
+    "MRVI": [
+      "生技"
+    ],
+    "IOVA": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "AAOI": [
+      "半導體"
+    ],
+    "ECG": [
+      "美國基礎建設"
+    ],
+    "ROK": [
+      "美國基礎建設"
+    ],
+    "FHI": [
+      "資本市場業者"
+    ],
+    "SM": [
+      "油氣探勘生產",
+      "能源（窄義）"
+    ],
+    "MOD": [
+      "汽車零組件",
+      "建商",
+      "智慧移動"
+    ],
+    "HCSG": [
+      "醫療"
+    ],
+    "ZVRA": [
+      "生技",
+      "製藥"
+    ],
+    "TFSL": [
+      "地區銀行"
+    ],
+    "H": [
+      "休閒娛樂"
+    ],
+    "MDU": [
+      "美國基礎建設"
+    ],
+    "SNDA": [
+      "醫療"
+    ],
+    "CARR": [
+      "建商"
+    ],
+    "CRS": [
+      "美國基礎建設",
+      "航太與國防（廣義）",
+      "3D 列印與積層製造"
+    ],
+    "ATEN": [
+      "軟體應用",
+      "資安防護"
+    ],
+    "DINO": [
+      "油氣探勘生產"
+    ],
+    "MIRM": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "DOCN": [
+      "網路服務",
+      "雲端 SaaS"
+    ],
+    "GL": [
+      "保險業（廣義）"
+    ],
+    "MLI": [
+      "美國基礎建設"
+    ],
+    "ELDN": [
+      "生技"
+    ],
+    "CLYM": [
+      "生技"
+    ],
+    "AIP": [
+      "軟體應用",
+      "半導體"
+    ],
+    "ROST": [
+      "零售業（廣義）"
+    ],
+    "POWI": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "CADL": [
+      "生技"
+    ],
+    "VLY": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "COHR": [
+      "太空經濟",
+      "電動車與自駕",
+      "電子零組件",
+      "半導體動能型",
+      "高速光通訊與網通"
+    ],
+    "ATOM": [
+      "半導體"
+    ],
+    "MAR": [
+      "休閒娛樂"
+    ],
+    "ACLS": [
+      "半導體設備產業"
+    ],
+    "HP": [
+      "油氣探勘生產",
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "PLAB": [
+      "半導體設備產業"
+    ],
+    "CASY": [
+      "零售業（廣義）"
+    ],
+    "PSX": [
+      "石化",
+      "能源",
+      "油氣探勘生產"
+    ],
+    "SNDK": [
+      "記憶體晶片",
+      "電子零組件"
+    ],
+    "WBS": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "AA": [
+      "美國基礎建設"
+    ],
+    "NN": [
+      "軟體應用"
+    ],
+    "GSAT": [
+      "社群情緒領頭羊（量化）",
+      "太空經濟"
+    ],
+    "MTSI": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "RKLB": [
+      "國防軍工",
+      "社群情緒領頭羊（量化）",
+      "航太與國防（廣義）",
+      "太空經濟",
+      "生成式 AI"
+    ],
+    "SYRE": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "PLD": [
+      "工業 REITs"
+    ],
+    "WHD": [
+      "油田服務"
+    ],
+    "LIN": [
+      "化工"
+    ],
+    "VIRT": [
+      "金融科技（廣義）",
+      "資本市場業者"
+    ],
+    "PFG": [
+      "保險業（廣義）"
+    ],
+    "PL": [
+      "太空經濟",
+      "電子零組件"
+    ],
+    "FANG": [
+      "石化",
+      "能源",
+      "油氣探勘生產",
+      "能源（窄義）"
+    ],
+    "VTRS": [
+      "生技",
+      "製藥"
+    ],
+    "NKTX": [
+      "生技"
+    ],
+    "FUN": [
+      "運動博弈"
+    ],
+    "DBRG": [
+      "資本市場業者"
+    ],
+    "BUSE": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "CNTX": [
+      "生技"
+    ],
+    "LSCC": [
+      "半導體設備產業",
+      "半導體（廣義）"
+    ],
+    "QUIK": [
+      "半導體"
+    ],
+    "LITE": [
+      "高速光通訊與網通"
+    ],
+    "TSN": [
+      "農業綜合企業"
+    ],
+    "CNO": [
+      "保險業（廣義）"
+    ],
+    "PUMP": [
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "ACDC": [
+      "油田服務"
+    ],
+    "MO": [
+      "生技"
+    ],
+    "SEI": [
+      "油田服務"
+    ],
+    "WULF": [
+      "比特幣礦工",
+      "數位轉型（加密）",
+      "區塊鏈基礎建設",
+      "社群情緒領頭羊（量化）",
+      "軟體應用",
+      "網路服務"
+    ],
+    "MTZ": [
+      "美國基礎建設"
+    ],
+    "NXT": [
+      "太陽能產業",
+      "太陽能"
+    ],
+    "WTI": [
+      "油氣探勘生產"
+    ],
+    "PWR": [
+      "美國基礎建設",
+      "資料中心電力與散熱"
+    ],
+    "CAT": [
+      "自動駕駛與機器人（ARKQ）"
+    ],
+    "ONB": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "OII": [
+      "太空經濟",
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "GVA": [
+      "國防軍工",
+      "美國基礎建設"
+    ],
+    "CGEM": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "WDC": [
+      "HBM 與 AI 記憶體",
+      "記憶體晶片",
+      "電子零組件"
+    ],
+    "EPD": [
+      "石化",
+      "能源中游（MLP）",
+      "能源"
+    ],
+    "TWST": [
+      "腫瘤免疫療法",
+      "基因組革命（ARKG）",
+      "生技",
+      "ARK 顛覆性創新（ARKK）",
+      "生技（廣義）"
+    ],
+    "IPGP": [
+      "半導體"
+    ],
+    "HOPE": [
+      "地區銀行"
+    ],
+    "HXL": [
+      "航太與國防（廣義）",
+      "太空經濟"
+    ],
+    "LRCX": [
+      "半導體設備產業",
+      "半導體設備",
+      "半導體（廣義）"
+    ],
+    "MITK": [
+      "金融科技（廣義）",
+      "軟體應用"
+    ],
+    "IMVT": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "MGNX": [
+      "生技"
+    ],
+    "LYV": [
+      "休閒娛樂"
+    ],
+    "OKE": [
+      "石化",
+      "能源中游（MLP）",
+      "能源",
+      "油氣探勘生產",
+      "能源（窄義）"
+    ],
+    "MPWR": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "AXSM": [
+      "生技",
+      "製藥"
+    ],
+    "GLW": [
+      "高速光通訊與網通"
+    ],
+    "RPRX": [
+      "生技",
+      "製藥"
+    ],
+    "GEV": [
+      "太陽能產業",
+      "太陽能",
+      "資料中心電力與散熱"
+    ],
+    "BWA": [
+      "汽車零組件",
+      "智慧移動"
+    ],
+    "AURA": [
+      "生技"
+    ],
+    "IEP": [
+      "汽車零組件"
+    ],
+    "LEA": [
+      "汽車零組件",
+      "智慧移動",
+      "電動車與自駕"
+    ],
+    "CSCO": [
+      "AI（廣義）",
+      "資安防護"
+    ],
+    "SEZL": [
+      "金融科技（廣義）"
+    ],
+    "COLB": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "WAB": [
+      "電動車與自駕"
+    ],
+    "FLG": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "EWBC": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "C": [
+      "銀行業（廣義）"
+    ],
+    "IRDM": [
+      "智慧移動",
+      "太空經濟",
+      "太空與國防創新（ARKX）",
+      "自動駕駛與機器人（ARKQ）"
+    ],
+    "YOU": [
+      "軟體應用"
+    ],
+    "WT": [
+      "區塊鏈基礎建設",
+      "資本市場業者"
+    ],
+    "HLT": [
+      "休閒娛樂"
+    ],
+    "DD": [
+      "化工"
+    ],
+    "LXRX": [
+      "生技"
+    ],
+    "VSH": [
+      "電子零組件"
+    ],
+    "SFNC": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "FULT": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "RSI": [
+      "運動博弈"
+    ],
+    "COHU": [
+      "電子零組件",
+      "半導體設備產業",
+      "先進封裝量測自動化"
+    ],
+    "CSX": [
+      "美國基礎建設"
+    ],
+    "ZION": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "HESM": [
+      "油氣探勘生產",
+      "能源（窄義）"
+    ],
+    "NUE": [
+      "美國基礎建設"
+    ],
+    "DAN": [
+      "汽車零組件",
+      "智慧移動"
+    ],
+    "CRUS": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "AXGN": [
+      "生技"
+    ],
+    "IAC": [
+      "社群媒體"
+    ],
+    "LQDA": [
+      "生技",
+      "製藥"
+    ],
+    "MPC": [
+      "石化",
+      "能源",
+      "油氣探勘生產"
+    ],
+    "CWAN": [
+      "軟體應用"
+    ],
+    "CPAY": [
+      "行動支付"
+    ],
+    "EBAY": [
+      "零售業（廣義）",
+      "電子商務"
+    ],
+    "RVMD": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "IBKR": [
+      "資本市場業者"
+    ],
+    "SRRK": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "UCTT": [
+      "先進封裝載板與材料",
+      "先進封裝製程機台",
+      "半導體設備產業"
+    ],
+    "ROKU": [
+      "ARK 顛覆性創新（ARKK）",
+      "金融科技創新（ARKF）",
+      "次世代網路（ARKW）"
+    ],
+    "ARKO": [
+      "零售業（廣義）"
+    ],
+    "HWM": [
+      "美國基礎建設",
+      "航太與國防（廣義）"
+    ],
+    "CLMT": [
+      "油氣探勘生產"
+    ],
+    "CCCC": [
+      "生技"
+    ],
+    "Q": [
+      "半導體"
+    ],
+    "PURR": [
+      "生技（廣義）"
+    ],
+    "ARW": [
+      "電子零組件"
+    ],
+    "WCC": [
+      "美國基礎建設"
+    ],
+    "INVX": [
+      "油田服務"
+    ],
+    "AXTI": [
+      "半導體"
+    ],
+    "RLMD": [
+      "生技"
+    ],
+    "SMTC": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "AVT": [
+      "電子零組件"
+    ],
+    "FLY": [
+      "國防軍工",
+      "太空經濟"
+    ],
+    "HPE": [
+      "AI（廣義）"
+    ],
+    "LNTH": [
+      "生技"
+    ],
+    "CVBF": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "ELVN": [
+      "生技",
+      "製藥"
+    ],
+    "HAL": [
+      "石化",
+      "能源",
+      "能源（窄義）",
+      "油田服務"
+    ],
+    "SIRI": [
+      "太空經濟"
+    ],
+    "ARWR": [
+      "腫瘤免疫療法",
+      "生技",
+      "生技（廣義）"
+    ],
+    "BKR": [
+      "石化",
+      "能源",
+      "油田服務"
+    ],
+    "WHWK": [
+      "生技"
+    ],
+    "RAMP": [
+      "軟體應用"
+    ],
+    "WFRD": [
+      "油田服務"
+    ],
+    "FCF": [
+      "地區銀行"
+    ],
+    "ASB": [
+      "地區銀行",
+      "銀行業（廣義）"
+    ],
+    "SEM": [
+      "醫療"
+    ],
+    "DY": [
+      "美國基礎建設"
+    ],
+    "IEX": [
+      "美國基礎建設"
+    ],
+    "EWTX": [
+      "生技",
+      "製藥"
+    ],
+    "AMKR": [
+      "封測代工服務",
+      "AI 先進封裝 CoWoS",
+      "半導體"
+    ],
+    "CDP": [
+      "國防軍工"
+    ],
+    "LUNR": [
+      "航太與國防（廣義）",
+      "太空經濟",
+      "太空與國防創新（ARKX）",
+      "自動駕駛與機器人（ARKQ）"
+    ],
+    "MCHP": [
+      "資料中心 REITs",
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "ATI": [
+      "美國基礎建設",
+      "航太與國防（廣義）",
+      "電動車與自駕",
+      "3D 列印與積層製造"
+    ],
+    "POWL": [
+      "美國基礎建設",
+      "電子零組件"
+    ],
+    "DNTH": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "SITM": [
+      "電動車與自駕",
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "ENS": [
+      "鋰電池供應鏈",
+      "電動車與自駕"
+    ],
+    "HURA": [
+      "生技"
+    ],
+    "TXG": [
+      "基因組革命（ARKG）",
+      "生技",
+      "ARK 顛覆性創新（ARKK）"
+    ],
+    "TXN": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "VPG": [
+      "電子零組件"
+    ],
+    "ADM": [
+      "農業綜合企業"
+    ],
+    "EMN": [
+      "化工"
+    ],
+    "SKYT": [
+      "半導體",
+      "半導體（廣義）"
+    ],
+    "NSC": [
+      "美國基礎建設"
+    ],
+    "STLD": [
+      "美國基礎建設"
+    ],
+    "IRM": [
+      "資料中心 REITs",
+      "工業 REITs"
+    ],
+    "BKSY": [
+      "國防科技（純）",
+      "電子零組件"
+    ],
+    "CABA": [
+      "生技"
+    ],
+    "UNP": [
+      "美國基礎建設"
+    ],
+    "SLS": [
+      "生技",
+      "生技（廣義）"
+    ],
+    "RLAY": [
+      "腫瘤免疫療法",
+      "生技",
+      "生技（廣義）"
+    ]
+  },
+  "theme_strength": {
+    "LRCX": -1.16,
+    "AMAT": -0.14,
+    "KLAC": -0.41,
+    "VECO": -0.14,
+    "MKSI": 0.7,
+    "UCTT": 0.7,
+    "ICHR": 0.7,
+    "TER": 0.92,
+    "AEHR": -0.41,
+    "COHU": -0.41,
+    "AMKR": 0.43,
+    "MU": 2.38,
+    "WDC": 2.38,
+    "GEV": 1.11,
+    "VRT": -0.88,
+    "PWR": 0.98,
+    "GLW": -1.93,
+    "CIEN": -1.93,
+    "COHR": 0.79,
+    "LITE": -1.93,
+    "CSCO": -0.8,
+    "FFIV": -3.6,
+    "AKAM": -1.55,
+    "ATEN": -0.51,
+    "RKLB": 2.17,
+    "STRL": 2.17,
+    "FLY": 2.17,
+    "GVA": 2.17,
+    "CDP": 2.17,
+    "AME": 0.3,
+    "JBL": 0.3,
+    "ATI": 0.98,
+    "CRS": 0.98,
+    "CFG": -0.91,
+    "EWBC": -0.91,
+    "WBS": -0.91,
+    "UMBF": -0.91,
+    "ONB": -0.91,
+    "ZION": -0.91,
+    "COLB": -0.91,
+    "VLY": -0.91,
+    "FLG": -0.91,
+    "ASB": -0.91,
+    "TFSL": -0.91,
+    "FULT": -0.91,
+    "RNST": -0.91,
+    "CVBF": -0.91,
+    "FFBC": -0.91,
+    "SFNC": -0.91,
+    "PFS": -0.91,
+    "BUSE": -0.91,
+    "NWBI": -0.91,
+    "FCF": -0.91,
+    "HOPE": -0.91,
+    "CFFN": -0.91,
+    "HWM": 0.98,
+    "LUNR": 0.86,
+    "HXL": 0.86,
+    "INTC": 1.18,
+    "EQIX": 0.62,
+    "MCHP": 0.62,
+    "IRM": 0.62,
+    "ADM": 1.0,
+    "TSN": 1.0,
+    "GOOGL": 1.26,
+    "HPE": -0.8,
+    "HUT": 4.95,
+    "MPC": -1.72,
+    "VLO": -1.72,
+    "PSX": -1.72,
+    "OKE": -1.72,
+    "FANG": -1.72,
+    "DINO": -2.47,
+    "SM": -2.47,
+    "HESM": -2.47,
+    "PTEN": -2.47,
+    "HP": -2.47,
+    "CLMT": -2.47,
+    "AESI": -2.47,
+    "WTI": -2.47,
+    "BKR": -1.72,
+    "HAL": -1.72,
+    "WFRD": -4.64,
+    "NOV": -4.64,
+    "SEI": -4.64,
+    "WHD": -4.64,
+    "OII": 0.79,
+    "WTTR": -2.71,
+    "PUMP": -2.71,
+    "INVX": -4.64,
+    "ACDC": -4.64,
+    "TUSK": -4.64,
+    "ROKU": 0.92,
+    "TWST": 2.77,
+    "TXG": 2.28,
+    "CAT": -0.29,
+    "IRDM": 1.18,
+    "C": -0.91,
+    "BNY": -0.68,
+    "PNC": -0.91,
+    "RVMD": 1.05,
+    "BIIB": 2.77,
+    "ARWR": 2.77,
+    "IMVT": 1.05,
+    "CELC": 1.14,
+    "SYRE": 1.05,
+    "SRRK": 1.05,
+    "MIRM": 1.05,
+    "DNTH": 1.05,
+    "TVTX": 1.05,
+    "CPRX": 1.05,
+    "RLAY": 2.77,
+    "BCRX": 1.05,
+    "IOVA": 1.05,
+    "SLS": 1.05,
+    "PURR": 0.85,
+    "CGEM": 1.05,
+    "WULF": 4.95,
+    "DELL": 1.24,
+    "WT": 1.24,
+    "IBKR": -0.68,
+    "STT": -0.68,
+    "BEN": -0.68,
+    "SEIC": -0.68,
+    "SNEX": -0.68,
+    "VIRT": 1.0,
+    "VCTR": -0.68,
+    "FHI": -0.68,
+    "DBRG": -0.68,
+    "DOCN": -0.55,
+    "PUBM": -1.55,
+    "BKSY": 0.71,
+    "EBAY": 1.34,
+    "WMB": -1.81,
+    "EPD": -1.72,
+    "TRGP": -1.81,
+    "BE": 1.11,
+    "ON": 1.18,
+    "WAB": 0.65,
+    "SITM": 0.65,
+    "ENS": 0.95,
+    "LEA": 1.85,
+    "SEZL": 1.0,
+    "MITK": 1.0,
+    "CARR": 1.34,
+    "MOD": 1.85,
+    "CMI": 1.18,
+    "PLD": -0.26,
+    "PFG": -1.63,
+    "GL": -1.63,
+    "FAF": -1.63,
+    "CNO": -1.63,
+    "MAR": 2.11,
+    "HLT": 2.11,
+    "LYV": 2.11,
+    "H": 2.11,
+    "CZR": 4.09,
+    "SNDK": 1.93,
+    "CPAY": 0.24,
+    "MRK": 1.05,
+    "RPRX": 1.05,
+    "VTRS": 1.05,
+    "AXSM": 1.05,
+    "LQDA": 1.05,
+    "EWTX": 1.05,
+    "DFTX": 1.05,
+    "ELVN": 1.05,
+    "ZVRA": 1.05,
+    "ROST": 1.34,
+    "TGT": 1.34,
+    "CASY": 1.34,
+    "ARKO": 1.34,
+    "CGNX": -0.17,
+    "TXN": -1.0,
+    "ADI": 0.79,
+    "MPWR": -1.0,
+    "MTSI": -1.0,
+    "LSCC": -1.16,
+    "SMTC": -1.0,
+    "MXL": -1.0,
+    "CRUS": -1.0,
+    "POWI": -1.0,
+    "SKYT": -1.0,
+    "BWA": 1.85,
+    "DAN": 1.85,
+    "BLBD": 1.18,
+    "LTRX": 1.18,
+    "IAC": 1.26,
+    "GSAT": 1.03,
+    "YOU": -0.51,
+    "CWAN": -0.51,
+    "NN": -0.51,
+    "RAMP": -0.51,
+    "AIP": -0.51,
+    "NXT": 1.11,
+    "HASI": 1.11,
+    "CWEN": 1.08,
+    "TTMI": 0.79,
+    "PL": 0.79,
+    "VSAT": 0.79,
+    "SIRI": 0.79,
+    "RSI": 4.09,
+    "FUN": 4.09,
+    "UNP": 0.98,
+    "CSX": 0.98,
+    "NSC": 0.98,
+    "NUE": 0.98,
+    "ROK": 0.98,
+    "STLD": 0.98,
+    "MTZ": 0.98,
+    "AA": 0.98,
+    "FTV": 0.98,
+    "WCC": 0.98,
+    "DY": 0.98,
+    "IEX": 0.98,
+    "MLI": 0.98,
+    "POWL": 0.98,
+    "ECG": 0.98,
+    "CENX": 0.98,
+    "MDU": 0.98,
+    "IEP": 1.85,
+    "MO": 1.05,
+    "MASI": 1.05,
+    "LNTH": 1.05,
+    "KNSA": 1.05,
+    "AXGN": 1.05,
+    "MRVI": 1.05,
+    "LXRX": 1.05,
+    "AURA": 1.05,
+    "RLMD": 1.05,
+    "CLYM": 1.05,
+    "ACRS": 1.05,
+    "CABA": 1.05,
+    "CADL": 1.05,
+    "CCCC": 1.05,
+    "ELDN": 1.05,
+    "MGNX": 1.05,
+    "CNTX": 1.05,
+    "WHWK": 1.05,
+    "NKTX": 1.05,
+    "HURA": 1.05,
+    "LIN": 0.63,
+    "DD": 0.63,
+    "EMN": 0.63,
+    "ARW": -0.41,
+    "AVT": -0.41,
+    "VSH": -0.41,
+    "VPG": -0.41,
+    "CNC": 1.14,
+    "SEM": 1.14,
+    "SNDA": 1.14,
+    "HCSG": 1.14,
+    "ACLS": -1.16,
+    "PLAB": -1.16,
+    "GFS": -1.0,
+    "Q": -1.0,
+    "AAOI": -1.0,
+    "VIAV": -1.0,
+    "AXTI": -1.0,
+    "IPGP": -1.0,
+    "LASR": -1.0,
+    "AMBQ": -1.0,
+    "LPTH": -1.0,
+    "ATOM": -1.0,
+    "QUIK": -1.0
+  },
+  "theme_details": {
+    "STRL": [
+      {
+        "name": "國防軍工",
+        "name_en": "Defense",
+        "slug": "defense",
+        "chain_group": "Policy and Defense",
+        "chain_stage": "defense-prime-systems",
+        "avg_change_pct": 2.17
+      },
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "DFTX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "CWEN": [
+      {
+        "name": "太陽能",
+        "name_en": "Solar Energy",
+        "slug": "solar-energy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "solar",
+        "avg_change_pct": 1.08
+      }
+    ],
+    "LTRX": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      }
+    ],
+    "UMBF": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "CMI": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      },
+      {
+        "name": "氫能經濟",
+        "name_en": "Hydrogen Economy",
+        "slug": "hydrogen-economy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "hydrogen",
+        "avg_change_pct": 0.86
+      }
+    ],
+    "ADI": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "PTEN": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "ACRS": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "BIIB": [
+      {
+        "name": "腫瘤免疫療法",
+        "name_en": "Oncology Immunotherapy",
+        "slug": "oncology-immunotherapy",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "oncology",
+        "avg_change_pct": 2.77
+      },
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "FAF": [
+      {
+        "name": "保險業（廣義）",
+        "name_en": "Insurance (Broad)",
+        "slug": "insurance-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "insurance",
+        "avg_change_pct": -1.63
+      }
+    ],
+    "CGNX": [
+      {
+        "name": "機器人與自動化",
+        "name_en": "Robotics & Automation",
+        "slug": "robotics-automation",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-robotics",
+        "avg_change_pct": -0.17
+      }
+    ],
+    "MASI": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "AESI": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "SNEX": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "WMB": [
+      {
+        "name": "能源中游（MLP）",
+        "name_en": "Energy Midstream (MLP)",
+        "slug": "energy-midstream",
+        "chain_group": "Traditional Energy",
+        "chain_stage": "midstream",
+        "avg_change_pct": -1.81
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      }
+    ],
+    "NOV": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "STT": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "JBL": [
+      {
+        "name": "3D 列印與積層製造",
+        "name_en": "Additive Manufacturing (3D Printing)",
+        "slug": "additive-manufacturing",
+        "chain_group": "Industrial Tech",
+        "chain_stage": "3d-printing",
+        "avg_change_pct": 0.3
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "FFBC": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "CFFN": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "INTC": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "資料中心 REITs",
+        "name_en": "Data Center REITs",
+        "slug": "data-center-reits",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "real-estate",
+        "avg_change_pct": 0.62
+      },
+      {
+        "name": "AI（廣義）",
+        "name_en": "AI (Broad)",
+        "slug": "ai-broad",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-broad",
+        "avg_change_pct": -0.8
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "SEIC": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "BEN": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "LASR": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "ICHR": [
+      {
+        "name": "先進封裝載板與材料",
+        "name_en": "Advanced Packaging Substrates and Materials",
+        "slug": "advanced-packaging-substrates",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-substrates-materials",
+        "avg_change_pct": 0.7
+      },
+      {
+        "name": "先進封裝製程機台",
+        "name_en": "Advanced Packaging Process Equipment",
+        "slug": "advanced-packaging-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-process-equipment",
+        "avg_change_pct": -0.14
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      }
+    ],
+    "TGT": [
+      {
+        "name": "零售業（廣義）",
+        "name_en": "Retail (Broad)",
+        "slug": "retail-broad",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "retail",
+        "avg_change_pct": 1.34
+      }
+    ],
+    "LPTH": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "VLO": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "AMBQ": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "CELC": [
+      {
+        "name": "醫療",
+        "name_en": "Healthcare (HackMD)",
+        "slug": "futu-healthcare",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.14
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "VIAV": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "ON": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      },
+      {
+        "name": "量子計算",
+        "name_en": "Quantum Computing",
+        "slug": "quantum-computing",
+        "chain_group": "Frontier Compute",
+        "chain_stage": "quantum",
+        "avg_change_pct": -2.44
+      }
+    ],
+    "FTV": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "DELL": [
+      {
+        "name": "區塊鏈基礎建設",
+        "name_en": "Blockchain Infrastructure",
+        "slug": "blockchain",
+        "chain_group": "Crypto",
+        "chain_stage": "blockchain",
+        "avg_change_pct": 1.24
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      }
+    ],
+    "KNSA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "VSAT": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "FFIV": [
+      {
+        "name": "資安防護",
+        "name_en": "Cybersecurity",
+        "slug": "cybersecurity",
+        "chain_group": "Enterprise IT",
+        "chain_stage": "security-software",
+        "avg_change_pct": -3.6
+      }
+    ],
+    "AMAT": [
+      {
+        "name": "先進封裝製程機台",
+        "name_en": "Advanced Packaging Process Equipment",
+        "slug": "advanced-packaging-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-process-equipment",
+        "avg_change_pct": -0.14
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "半導體設備",
+        "name_en": "Semiconductor Equipment",
+        "slug": "semiconductor-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "wafer-fab-equipment",
+        "avg_change_pct": -1.41
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "TUSK": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "AKAM": [
+      {
+        "name": "雲端 SaaS",
+        "name_en": "Cloud SaaS",
+        "slug": "cloud-saas",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-cloud",
+        "avg_change_pct": -1.55
+      },
+      {
+        "name": "資安防護",
+        "name_en": "Cybersecurity",
+        "slug": "cybersecurity",
+        "chain_group": "Enterprise IT",
+        "chain_stage": "security-software",
+        "avg_change_pct": -3.6
+      }
+    ],
+    "EQIX": [
+      {
+        "name": "資料中心 REITs",
+        "name_en": "Data Center REITs",
+        "slug": "data-center-reits",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "real-estate",
+        "avg_change_pct": 0.62
+      },
+      {
+        "name": "工業 REITs",
+        "name_en": "Industrial REITs",
+        "slug": "industrial-reits",
+        "chain_group": "Digital Infra",
+        "chain_stage": "industrial-reit",
+        "avg_change_pct": -0.26
+      }
+    ],
+    "TRGP": [
+      {
+        "name": "能源中游（MLP）",
+        "name_en": "Energy Midstream (MLP)",
+        "slug": "energy-midstream",
+        "chain_group": "Traditional Energy",
+        "chain_stage": "midstream",
+        "avg_change_pct": -1.81
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      }
+    ],
+    "TVTX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "CNC": [
+      {
+        "name": "醫療",
+        "name_en": "Healthcare (HackMD)",
+        "slug": "futu-healthcare",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.14
+      }
+    ],
+    "VCTR": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "CENX": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "WTTR": [
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "PUBM": [
+      {
+        "name": "雲端 SaaS",
+        "name_en": "Cloud SaaS",
+        "slug": "cloud-saas",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-cloud",
+        "avg_change_pct": -1.55
+      }
+    ],
+    "MRK": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "NWBI": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "BLBD": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      }
+    ],
+    "CIEN": [
+      {
+        "name": "高速光通訊與網通",
+        "name_en": "Optical Networking",
+        "slug": "optical-networking",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "networking",
+        "avg_change_pct": -1.93
+      }
+    ],
+    "HASI": [
+      {
+        "name": "太陽能產業",
+        "name_en": "Solar (HackMD)",
+        "slug": "futu-solar",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.11
+      },
+      {
+        "name": "太陽能",
+        "name_en": "Solar Energy",
+        "slug": "solar-energy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "solar",
+        "avg_change_pct": 1.08
+      }
+    ],
+    "KLAC": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "先進封裝量測自動化",
+        "name_en": "Advanced Packaging Inspection and Automation",
+        "slug": "advanced-packaging-automation",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-inspection-automation",
+        "avg_change_pct": -1.39
+      },
+      {
+        "name": "半導體設備",
+        "name_en": "Semiconductor Equipment",
+        "slug": "semiconductor-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "wafer-fab-equipment",
+        "avg_change_pct": -1.41
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "VRT": [
+      {
+        "name": "資料中心電力與散熱",
+        "name_en": "Data Center Power and Cooling",
+        "slug": "data-center-power-cooling",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "power-cooling",
+        "avg_change_pct": -0.88
+      }
+    ],
+    "MXL": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "AME": [
+      {
+        "name": "3D 列印與積層製造",
+        "name_en": "Additive Manufacturing (3D Printing)",
+        "slug": "additive-manufacturing",
+        "chain_group": "Industrial Tech",
+        "chain_stage": "3d-printing",
+        "avg_change_pct": 0.3
+      }
+    ],
+    "VECO": [
+      {
+        "name": "先進封裝製程機台",
+        "name_en": "Advanced Packaging Process Equipment",
+        "slug": "advanced-packaging-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-process-equipment",
+        "avg_change_pct": -0.14
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "半導體設備",
+        "name_en": "Semiconductor Equipment",
+        "slug": "semiconductor-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "wafer-fab-equipment",
+        "avg_change_pct": -1.41
+      }
+    ],
+    "CPRX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "CFG": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "TTMI": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "AEHR": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "先進封裝量測自動化",
+        "name_en": "Advanced Packaging Inspection and Automation",
+        "slug": "advanced-packaging-automation",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-inspection-automation",
+        "avg_change_pct": -1.39
+      }
+    ],
+    "MKSI": [
+      {
+        "name": "先進封裝載板與材料",
+        "name_en": "Advanced Packaging Substrates and Materials",
+        "slug": "advanced-packaging-substrates",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-substrates-materials",
+        "avg_change_pct": 0.7
+      },
+      {
+        "name": "先進封裝製程機台",
+        "name_en": "Advanced Packaging Process Equipment",
+        "slug": "advanced-packaging-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-process-equipment",
+        "avg_change_pct": -0.14
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      }
+    ],
+    "MU": [
+      {
+        "name": "HBM 與 AI 記憶體",
+        "name_en": "HBM and AI Memory",
+        "slug": "hbm-memory",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "memory",
+        "avg_change_pct": 2.38
+      },
+      {
+        "name": "記憶體晶片",
+        "name_en": "Memory Chips (DRAM/HBM)",
+        "slug": "memory-chips",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "memory",
+        "avg_change_pct": 1.93
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "資料中心 REITs",
+        "name_en": "Data Center REITs",
+        "slug": "data-center-reits",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "real-estate",
+        "avg_change_pct": 0.62
+      },
+      {
+        "name": "AI（廣義）",
+        "name_en": "AI (Broad)",
+        "slug": "ai-broad",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-broad",
+        "avg_change_pct": -0.8
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "PFS": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "GOOGL": [
+      {
+        "name": "社群媒體",
+        "name_en": "Social Media",
+        "slug": "social-media",
+        "chain_group": "Internet & Media",
+        "chain_stage": "social",
+        "avg_change_pct": 1.26
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "Magnificent 7 大型 AI 股",
+        "name_en": "Magnificent 7 (Mega-cap AI Leaders)",
+        "slug": "magnificent-seven",
+        "chain_group": "AI Theme",
+        "chain_stage": "mega-cap-ai",
+        "avg_change_pct": 0.96
+      },
+      {
+        "name": "AI 雲端資本支出",
+        "name_en": "AI Cloud Capex",
+        "slug": "ai-cloud-capex",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "cloud-capex",
+        "avg_change_pct": 0.72
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "生成式 AI",
+        "name_en": "Generative AI / Chatbots",
+        "slug": "ai-generative",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-generative",
+        "avg_change_pct": 0.35
+      }
+    ],
+    "TER": [
+      {
+        "name": "ARK 顛覆性創新（ARKK）",
+        "name_en": "ARK Disruptive Innovation (ARKK)",
+        "slug": "ark-disruptive-innovation",
+        "chain_group": "ARK Family",
+        "chain_stage": "ark-flagship",
+        "avg_change_pct": 0.92
+      },
+      {
+        "name": "太空與國防創新（ARKX）",
+        "name_en": "Space & Defense Innovation (ARKX)",
+        "slug": "space-defense-innovation",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": -0.01
+      },
+      {
+        "name": "自動駕駛與機器人（ARKQ）",
+        "name_en": "Autonomous Tech & Robotics (ARKQ)",
+        "slug": "autonomous-tech-robotics",
+        "chain_group": "ARK Family",
+        "chain_stage": "autonomous-tech",
+        "avg_change_pct": -0.29
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "先進封裝量測自動化",
+        "name_en": "Advanced Packaging Inspection and Automation",
+        "slug": "advanced-packaging-automation",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-inspection-automation",
+        "avg_change_pct": -1.39
+      }
+    ],
+    "BCRX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "BNY": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "GFS": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "HUT": [
+      {
+        "name": "比特幣礦工",
+        "name_en": "Bitcoin Miners",
+        "slug": "bitcoin-miners",
+        "chain_group": "Crypto",
+        "chain_stage": "btc-miners",
+        "avg_change_pct": 4.95
+      },
+      {
+        "name": "加密資產基礎設施",
+        "name_en": "Crypto Infrastructure",
+        "slug": "crypto-infrastructure",
+        "chain_group": "Digital Assets",
+        "chain_stage": "exchange-mining-treasury",
+        "avg_change_pct": 2.88
+      },
+      {
+        "name": "數位轉型（加密）",
+        "name_en": "Digital Transformation (Crypto-Adjacent)",
+        "slug": "digital-transformation",
+        "chain_group": "Crypto",
+        "chain_stage": "crypto-broad",
+        "avg_change_pct": 2.56
+      },
+      {
+        "name": "區塊鏈基礎建設",
+        "name_en": "Blockchain Infrastructure",
+        "slug": "blockchain",
+        "chain_group": "Crypto",
+        "chain_stage": "blockchain",
+        "avg_change_pct": 1.24
+      },
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      },
+      {
+        "name": "AI（廣義）",
+        "name_en": "AI (Broad)",
+        "slug": "ai-broad",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-broad",
+        "avg_change_pct": -0.8
+      }
+    ],
+    "BE": [
+      {
+        "name": "太陽能產業",
+        "name_en": "Solar (HackMD)",
+        "slug": "futu-solar",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.11
+      },
+      {
+        "name": "太陽能",
+        "name_en": "Solar Energy",
+        "slug": "solar-energy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "solar",
+        "avg_change_pct": 1.08
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "鋰電池供應鏈",
+        "name_en": "Lithium & Battery Supply Chain",
+        "slug": "lithium-battery",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "battery-supply",
+        "avg_change_pct": 0.95
+      },
+      {
+        "name": "氫能經濟",
+        "name_en": "Hydrogen Economy",
+        "slug": "hydrogen-economy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "hydrogen",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      }
+    ],
+    "RNST": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "CZR": [
+      {
+        "name": "運動博弈",
+        "name_en": "Sports Betting & iGaming",
+        "slug": "sports-betting",
+        "chain_group": "Internet & Media",
+        "chain_stage": "gaming",
+        "avg_change_pct": 4.09
+      },
+      {
+        "name": "休閒娛樂",
+        "name_en": "Leisure & Entertainment",
+        "slug": "leisure-entertainment",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "leisure",
+        "avg_change_pct": 2.11
+      }
+    ],
+    "PNC": [
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "MRVI": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "IOVA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "AAOI": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "ECG": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "ROK": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "FHI": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "SM": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      }
+    ],
+    "MOD": [
+      {
+        "name": "汽車零組件",
+        "name_en": "Auto Parts (HackMD)",
+        "slug": "futu-auto-parts",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.85
+      },
+      {
+        "name": "建商",
+        "name_en": "Homebuilders",
+        "slug": "homebuilders",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "homebuilders",
+        "avg_change_pct": 1.34
+      },
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      }
+    ],
+    "HCSG": [
+      {
+        "name": "醫療",
+        "name_en": "Healthcare (HackMD)",
+        "slug": "futu-healthcare",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.14
+      }
+    ],
+    "ZVRA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "TFSL": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "H": [
+      {
+        "name": "休閒娛樂",
+        "name_en": "Leisure & Entertainment",
+        "slug": "leisure-entertainment",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "leisure",
+        "avg_change_pct": 2.11
+      }
+    ],
+    "MDU": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "SNDA": [
+      {
+        "name": "醫療",
+        "name_en": "Healthcare (HackMD)",
+        "slug": "futu-healthcare",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.14
+      }
+    ],
+    "CARR": [
+      {
+        "name": "建商",
+        "name_en": "Homebuilders",
+        "slug": "homebuilders",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "homebuilders",
+        "avg_change_pct": 1.34
+      }
+    ],
+    "CRS": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      },
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "3D 列印與積層製造",
+        "name_en": "Additive Manufacturing (3D Printing)",
+        "slug": "additive-manufacturing",
+        "chain_group": "Industrial Tech",
+        "chain_stage": "3d-printing",
+        "avg_change_pct": 0.3
+      }
+    ],
+    "ATEN": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      },
+      {
+        "name": "資安防護",
+        "name_en": "Cybersecurity",
+        "slug": "cybersecurity",
+        "chain_group": "Enterprise IT",
+        "chain_stage": "security-software",
+        "avg_change_pct": -3.6
+      }
+    ],
+    "DINO": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "MIRM": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "DOCN": [
+      {
+        "name": "網路服務",
+        "name_en": "Internet Services (HackMD)",
+        "slug": "futu-internet-services",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.55
+      },
+      {
+        "name": "雲端 SaaS",
+        "name_en": "Cloud SaaS",
+        "slug": "cloud-saas",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-cloud",
+        "avg_change_pct": -1.55
+      }
+    ],
+    "GL": [
+      {
+        "name": "保險業（廣義）",
+        "name_en": "Insurance (Broad)",
+        "slug": "insurance-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "insurance",
+        "avg_change_pct": -1.63
+      }
+    ],
+    "MLI": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "ELDN": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "CLYM": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "AIP": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "ROST": [
+      {
+        "name": "零售業（廣義）",
+        "name_en": "Retail (Broad)",
+        "slug": "retail-broad",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "retail",
+        "avg_change_pct": 1.34
+      }
+    ],
+    "POWI": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "CADL": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "VLY": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "COHR": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      },
+      {
+        "name": "半導體動能型",
+        "name_en": "Semiconductor (Momentum Factor)",
+        "slug": "semiconductor-momentum",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-momentum",
+        "avg_change_pct": -1.4
+      },
+      {
+        "name": "高速光通訊與網通",
+        "name_en": "Optical Networking",
+        "slug": "optical-networking",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "networking",
+        "avg_change_pct": -1.93
+      }
+    ],
+    "ATOM": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "MAR": [
+      {
+        "name": "休閒娛樂",
+        "name_en": "Leisure & Entertainment",
+        "slug": "leisure-entertainment",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "leisure",
+        "avg_change_pct": 2.11
+      }
+    ],
+    "ACLS": [
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      }
+    ],
+    "HP": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "PLAB": [
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      }
+    ],
+    "CASY": [
+      {
+        "name": "零售業（廣義）",
+        "name_en": "Retail (Broad)",
+        "slug": "retail-broad",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "retail",
+        "avg_change_pct": 1.34
+      }
+    ],
+    "PSX": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "SNDK": [
+      {
+        "name": "記憶體晶片",
+        "name_en": "Memory Chips (DRAM/HBM)",
+        "slug": "memory-chips",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "memory",
+        "avg_change_pct": 1.93
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "WBS": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "AA": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "NN": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      }
+    ],
+    "GSAT": [
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      }
+    ],
+    "MTSI": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "RKLB": [
+      {
+        "name": "國防軍工",
+        "name_en": "Defense",
+        "slug": "defense",
+        "chain_group": "Policy and Defense",
+        "chain_stage": "defense-prime-systems",
+        "avg_change_pct": 2.17
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "生成式 AI",
+        "name_en": "Generative AI / Chatbots",
+        "slug": "ai-generative",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-generative",
+        "avg_change_pct": 0.35
+      }
+    ],
+    "SYRE": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "PLD": [
+      {
+        "name": "工業 REITs",
+        "name_en": "Industrial REITs",
+        "slug": "industrial-reits",
+        "chain_group": "Digital Infra",
+        "chain_stage": "industrial-reit",
+        "avg_change_pct": -0.26
+      }
+    ],
+    "WHD": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "LIN": [
+      {
+        "name": "化工",
+        "name_en": "Chemicals (HackMD)",
+        "slug": "futu-chemicals",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 0.63
+      }
+    ],
+    "VIRT": [
+      {
+        "name": "金融科技（廣義）",
+        "name_en": "Fintech (Broad)",
+        "slug": "fintech-broad",
+        "chain_group": "Fintech",
+        "chain_stage": "fintech-broad",
+        "avg_change_pct": 1.0
+      },
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "PFG": [
+      {
+        "name": "保險業（廣義）",
+        "name_en": "Insurance (Broad)",
+        "slug": "insurance-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "insurance",
+        "avg_change_pct": -1.63
+      }
+    ],
+    "PL": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "FANG": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      }
+    ],
+    "VTRS": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "NKTX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "FUN": [
+      {
+        "name": "運動博弈",
+        "name_en": "Sports Betting & iGaming",
+        "slug": "sports-betting",
+        "chain_group": "Internet & Media",
+        "chain_stage": "gaming",
+        "avg_change_pct": 4.09
+      }
+    ],
+    "DBRG": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "BUSE": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "CNTX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "LSCC": [
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "QUIK": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "LITE": [
+      {
+        "name": "高速光通訊與網通",
+        "name_en": "Optical Networking",
+        "slug": "optical-networking",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "networking",
+        "avg_change_pct": -1.93
+      }
+    ],
+    "TSN": [
+      {
+        "name": "農業綜合企業",
+        "name_en": "Agribusiness (Global)",
+        "slug": "agribusiness",
+        "chain_group": "Agriculture",
+        "chain_stage": "ag-broad",
+        "avg_change_pct": 1.0
+      }
+    ],
+    "CNO": [
+      {
+        "name": "保險業（廣義）",
+        "name_en": "Insurance (Broad)",
+        "slug": "insurance-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "insurance",
+        "avg_change_pct": -1.63
+      }
+    ],
+    "PUMP": [
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "ACDC": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "MO": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "SEI": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "WULF": [
+      {
+        "name": "比特幣礦工",
+        "name_en": "Bitcoin Miners",
+        "slug": "bitcoin-miners",
+        "chain_group": "Crypto",
+        "chain_stage": "btc-miners",
+        "avg_change_pct": 4.95
+      },
+      {
+        "name": "數位轉型（加密）",
+        "name_en": "Digital Transformation (Crypto-Adjacent)",
+        "slug": "digital-transformation",
+        "chain_group": "Crypto",
+        "chain_stage": "crypto-broad",
+        "avg_change_pct": 2.56
+      },
+      {
+        "name": "區塊鏈基礎建設",
+        "name_en": "Blockchain Infrastructure",
+        "slug": "blockchain",
+        "chain_group": "Crypto",
+        "chain_stage": "blockchain",
+        "avg_change_pct": 1.24
+      },
+      {
+        "name": "社群情緒領頭羊（量化）",
+        "name_en": "Social Sentiment Leaders (Quant)",
+        "slug": "social-sentiment-leaders",
+        "chain_group": "Quant Signals",
+        "chain_stage": "sentiment-signal",
+        "avg_change_pct": 1.03
+      },
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      },
+      {
+        "name": "網路服務",
+        "name_en": "Internet Services (HackMD)",
+        "slug": "futu-internet-services",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.55
+      }
+    ],
+    "MTZ": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "NXT": [
+      {
+        "name": "太陽能產業",
+        "name_en": "Solar (HackMD)",
+        "slug": "futu-solar",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.11
+      },
+      {
+        "name": "太陽能",
+        "name_en": "Solar Energy",
+        "slug": "solar-energy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "solar",
+        "avg_change_pct": 1.08
+      }
+    ],
+    "WTI": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "PWR": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      },
+      {
+        "name": "資料中心電力與散熱",
+        "name_en": "Data Center Power and Cooling",
+        "slug": "data-center-power-cooling",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "power-cooling",
+        "avg_change_pct": -0.88
+      }
+    ],
+    "CAT": [
+      {
+        "name": "自動駕駛與機器人（ARKQ）",
+        "name_en": "Autonomous Tech & Robotics (ARKQ)",
+        "slug": "autonomous-tech-robotics",
+        "chain_group": "ARK Family",
+        "chain_stage": "autonomous-tech",
+        "avg_change_pct": -0.29
+      }
+    ],
+    "ONB": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "OII": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "GVA": [
+      {
+        "name": "國防軍工",
+        "name_en": "Defense",
+        "slug": "defense",
+        "chain_group": "Policy and Defense",
+        "chain_stage": "defense-prime-systems",
+        "avg_change_pct": 2.17
+      },
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "CGEM": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "WDC": [
+      {
+        "name": "HBM 與 AI 記憶體",
+        "name_en": "HBM and AI Memory",
+        "slug": "hbm-memory",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "memory",
+        "avg_change_pct": 2.38
+      },
+      {
+        "name": "記憶體晶片",
+        "name_en": "Memory Chips (DRAM/HBM)",
+        "slug": "memory-chips",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "memory",
+        "avg_change_pct": 1.93
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "EPD": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源中游（MLP）",
+        "name_en": "Energy Midstream (MLP)",
+        "slug": "energy-midstream",
+        "chain_group": "Traditional Energy",
+        "chain_stage": "midstream",
+        "avg_change_pct": -1.81
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      }
+    ],
+    "TWST": [
+      {
+        "name": "腫瘤免疫療法",
+        "name_en": "Oncology Immunotherapy",
+        "slug": "oncology-immunotherapy",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "oncology",
+        "avg_change_pct": 2.77
+      },
+      {
+        "name": "基因組革命（ARKG）",
+        "name_en": "Genomic Revolution (ARKG)",
+        "slug": "genomic-revolution",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "genomics",
+        "avg_change_pct": 2.28
+      },
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "ARK 顛覆性創新（ARKK）",
+        "name_en": "ARK Disruptive Innovation (ARKK)",
+        "slug": "ark-disruptive-innovation",
+        "chain_group": "ARK Family",
+        "chain_stage": "ark-flagship",
+        "avg_change_pct": 0.92
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "IPGP": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "HOPE": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "HXL": [
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      }
+    ],
+    "LRCX": [
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "半導體設備",
+        "name_en": "Semiconductor Equipment",
+        "slug": "semiconductor-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "wafer-fab-equipment",
+        "avg_change_pct": -1.41
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "MITK": [
+      {
+        "name": "金融科技（廣義）",
+        "name_en": "Fintech (Broad)",
+        "slug": "fintech-broad",
+        "chain_group": "Fintech",
+        "chain_stage": "fintech-broad",
+        "avg_change_pct": 1.0
+      },
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      }
+    ],
+    "IMVT": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "MGNX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "LYV": [
+      {
+        "name": "休閒娛樂",
+        "name_en": "Leisure & Entertainment",
+        "slug": "leisure-entertainment",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "leisure",
+        "avg_change_pct": 2.11
+      }
+    ],
+    "OKE": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源中游（MLP）",
+        "name_en": "Energy Midstream (MLP)",
+        "slug": "energy-midstream",
+        "chain_group": "Traditional Energy",
+        "chain_stage": "midstream",
+        "avg_change_pct": -1.81
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      }
+    ],
+    "MPWR": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "AXSM": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "GLW": [
+      {
+        "name": "高速光通訊與網通",
+        "name_en": "Optical Networking",
+        "slug": "optical-networking",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "networking",
+        "avg_change_pct": -1.93
+      }
+    ],
+    "RPRX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "GEV": [
+      {
+        "name": "太陽能產業",
+        "name_en": "Solar (HackMD)",
+        "slug": "futu-solar",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.11
+      },
+      {
+        "name": "太陽能",
+        "name_en": "Solar Energy",
+        "slug": "solar-energy",
+        "chain_group": "Energy Transition",
+        "chain_stage": "solar",
+        "avg_change_pct": 1.08
+      },
+      {
+        "name": "資料中心電力與散熱",
+        "name_en": "Data Center Power and Cooling",
+        "slug": "data-center-power-cooling",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "power-cooling",
+        "avg_change_pct": -0.88
+      }
+    ],
+    "BWA": [
+      {
+        "name": "汽車零組件",
+        "name_en": "Auto Parts (HackMD)",
+        "slug": "futu-auto-parts",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.85
+      },
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      }
+    ],
+    "AURA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "IEP": [
+      {
+        "name": "汽車零組件",
+        "name_en": "Auto Parts (HackMD)",
+        "slug": "futu-auto-parts",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.85
+      }
+    ],
+    "LEA": [
+      {
+        "name": "汽車零組件",
+        "name_en": "Auto Parts (HackMD)",
+        "slug": "futu-auto-parts",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.85
+      },
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      }
+    ],
+    "CSCO": [
+      {
+        "name": "AI（廣義）",
+        "name_en": "AI (Broad)",
+        "slug": "ai-broad",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-broad",
+        "avg_change_pct": -0.8
+      },
+      {
+        "name": "資安防護",
+        "name_en": "Cybersecurity",
+        "slug": "cybersecurity",
+        "chain_group": "Enterprise IT",
+        "chain_stage": "security-software",
+        "avg_change_pct": -3.6
+      }
+    ],
+    "SEZL": [
+      {
+        "name": "金融科技（廣義）",
+        "name_en": "Fintech (Broad)",
+        "slug": "fintech-broad",
+        "chain_group": "Fintech",
+        "chain_stage": "fintech-broad",
+        "avg_change_pct": 1.0
+      }
+    ],
+    "COLB": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "WAB": [
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      }
+    ],
+    "FLG": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "EWBC": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "C": [
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "IRDM": [
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "太空與國防創新（ARKX）",
+        "name_en": "Space & Defense Innovation (ARKX)",
+        "slug": "space-defense-innovation",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": -0.01
+      },
+      {
+        "name": "自動駕駛與機器人（ARKQ）",
+        "name_en": "Autonomous Tech & Robotics (ARKQ)",
+        "slug": "autonomous-tech-robotics",
+        "chain_group": "ARK Family",
+        "chain_stage": "autonomous-tech",
+        "avg_change_pct": -0.29
+      }
+    ],
+    "YOU": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      }
+    ],
+    "WT": [
+      {
+        "name": "區塊鏈基礎建設",
+        "name_en": "Blockchain Infrastructure",
+        "slug": "blockchain",
+        "chain_group": "Crypto",
+        "chain_stage": "blockchain",
+        "avg_change_pct": 1.24
+      },
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "HLT": [
+      {
+        "name": "休閒娛樂",
+        "name_en": "Leisure & Entertainment",
+        "slug": "leisure-entertainment",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "leisure",
+        "avg_change_pct": 2.11
+      }
+    ],
+    "DD": [
+      {
+        "name": "化工",
+        "name_en": "Chemicals (HackMD)",
+        "slug": "futu-chemicals",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 0.63
+      }
+    ],
+    "LXRX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "VSH": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "SFNC": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "FULT": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "RSI": [
+      {
+        "name": "運動博弈",
+        "name_en": "Sports Betting & iGaming",
+        "slug": "sports-betting",
+        "chain_group": "Internet & Media",
+        "chain_stage": "gaming",
+        "avg_change_pct": 4.09
+      }
+    ],
+    "COHU": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      },
+      {
+        "name": "先進封裝量測自動化",
+        "name_en": "Advanced Packaging Inspection and Automation",
+        "slug": "advanced-packaging-automation",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-inspection-automation",
+        "avg_change_pct": -1.39
+      }
+    ],
+    "CSX": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "ZION": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "HESM": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      }
+    ],
+    "NUE": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "DAN": [
+      {
+        "name": "汽車零組件",
+        "name_en": "Auto Parts (HackMD)",
+        "slug": "futu-auto-parts",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.85
+      },
+      {
+        "name": "智慧移動",
+        "name_en": "Smart Mobility (Kensho)",
+        "slug": "smart-mobility",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "smart-mobility",
+        "avg_change_pct": 1.18
+      }
+    ],
+    "CRUS": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "AXGN": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "IAC": [
+      {
+        "name": "社群媒體",
+        "name_en": "Social Media",
+        "slug": "social-media",
+        "chain_group": "Internet & Media",
+        "chain_stage": "social",
+        "avg_change_pct": 1.26
+      }
+    ],
+    "LQDA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "MPC": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "CWAN": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      }
+    ],
+    "CPAY": [
+      {
+        "name": "行動支付",
+        "name_en": "Mobile Payments",
+        "slug": "mobile-payments",
+        "chain_group": "Fintech",
+        "chain_stage": "payments",
+        "avg_change_pct": 0.24
+      }
+    ],
+    "EBAY": [
+      {
+        "name": "零售業（廣義）",
+        "name_en": "Retail (Broad)",
+        "slug": "retail-broad",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "retail",
+        "avg_change_pct": 1.34
+      },
+      {
+        "name": "電子商務",
+        "name_en": "E-commerce",
+        "slug": "ecommerce",
+        "chain_group": "Internet & Media",
+        "chain_stage": "ecommerce",
+        "avg_change_pct": 0.67
+      }
+    ],
+    "RVMD": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "IBKR": [
+      {
+        "name": "資本市場業者",
+        "name_en": "Capital Markets",
+        "slug": "capital-markets",
+        "chain_group": "Financials Detail",
+        "chain_stage": "capital-markets",
+        "avg_change_pct": -0.68
+      }
+    ],
+    "SRRK": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "UCTT": [
+      {
+        "name": "先進封裝載板與材料",
+        "name_en": "Advanced Packaging Substrates and Materials",
+        "slug": "advanced-packaging-substrates",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-substrates-materials",
+        "avg_change_pct": 0.7
+      },
+      {
+        "name": "先進封裝製程機台",
+        "name_en": "Advanced Packaging Process Equipment",
+        "slug": "advanced-packaging-equipment",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-process-equipment",
+        "avg_change_pct": -0.14
+      },
+      {
+        "name": "半導體設備產業",
+        "name_en": "Semiconductor Equipment (HackMD)",
+        "slug": "futu-semi-equipment",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.16
+      }
+    ],
+    "ROKU": [
+      {
+        "name": "ARK 顛覆性創新（ARKK）",
+        "name_en": "ARK Disruptive Innovation (ARKK)",
+        "slug": "ark-disruptive-innovation",
+        "chain_group": "ARK Family",
+        "chain_stage": "ark-flagship",
+        "avg_change_pct": 0.92
+      },
+      {
+        "name": "金融科技創新（ARKF）",
+        "name_en": "Fintech Innovation (ARKF)",
+        "slug": "fintech-innovation",
+        "chain_group": "Fintech",
+        "chain_stage": "fintech-broad",
+        "avg_change_pct": 0.52
+      },
+      {
+        "name": "次世代網路（ARKW）",
+        "name_en": "Next Generation Internet (ARKW)",
+        "slug": "next-gen-internet",
+        "chain_group": "ARK Family",
+        "chain_stage": "internet-disruption",
+        "avg_change_pct": 0.32
+      }
+    ],
+    "ARKO": [
+      {
+        "name": "零售業（廣義）",
+        "name_en": "Retail (Broad)",
+        "slug": "retail-broad",
+        "chain_group": "Consumer Detail",
+        "chain_stage": "retail",
+        "avg_change_pct": 1.34
+      }
+    ],
+    "HWM": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      },
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      }
+    ],
+    "CLMT": [
+      {
+        "name": "油氣探勘生產",
+        "name_en": "Oil and Gas E&P",
+        "slug": "oil-gas-ep",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "upstream-energy",
+        "avg_change_pct": -2.47
+      }
+    ],
+    "CCCC": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "Q": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "PURR": [
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "ARW": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "WCC": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "INVX": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "AXTI": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "RLMD": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "SMTC": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "AVT": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "FLY": [
+      {
+        "name": "國防軍工",
+        "name_en": "Defense",
+        "slug": "defense",
+        "chain_group": "Policy and Defense",
+        "chain_stage": "defense-prime-systems",
+        "avg_change_pct": 2.17
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      }
+    ],
+    "HPE": [
+      {
+        "name": "AI（廣義）",
+        "name_en": "AI (Broad)",
+        "slug": "ai-broad",
+        "chain_group": "AI Theme",
+        "chain_stage": "ai-broad",
+        "avg_change_pct": -0.8
+      }
+    ],
+    "LNTH": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "CVBF": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "ELVN": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "HAL": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "能源（窄義）",
+        "name_en": "Energy Narrow (HackMD)",
+        "slug": "futu-energy-narrow",
+        "chain_group": "curated",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.71
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "SIRI": [
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      }
+    ],
+    "ARWR": [
+      {
+        "name": "腫瘤免疫療法",
+        "name_en": "Oncology Immunotherapy",
+        "slug": "oncology-immunotherapy",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "oncology",
+        "avg_change_pct": 2.77
+      },
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "BKR": [
+      {
+        "name": "石化",
+        "name_en": "Petrochemicals (HackMD)",
+        "slug": "futu-petrochem",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.72
+      },
+      {
+        "name": "能源",
+        "name_en": "Energy (HackMD)",
+        "slug": "futu-energy",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -2.22
+      },
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "WHWK": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "RAMP": [
+      {
+        "name": "軟體應用",
+        "name_en": "Software Applications",
+        "slug": "software-applications",
+        "chain_group": "Enterprise Software",
+        "chain_stage": "saas-apps",
+        "avg_change_pct": -0.51
+      }
+    ],
+    "WFRD": [
+      {
+        "name": "油田服務",
+        "name_en": "Oilfield Services",
+        "slug": "oilfield-services",
+        "chain_group": "Commodity Cycle",
+        "chain_stage": "energy-services",
+        "avg_change_pct": -4.64
+      }
+    ],
+    "FCF": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "ASB": [
+      {
+        "name": "地區銀行",
+        "name_en": "Regional Banks",
+        "slug": "regional-banks",
+        "chain_group": "Rate Cycle",
+        "chain_stage": "regional-banking",
+        "avg_change_pct": -0.91
+      },
+      {
+        "name": "銀行業（廣義）",
+        "name_en": "Banks (Broad / S&P)",
+        "slug": "banks-broad",
+        "chain_group": "Financials Detail",
+        "chain_stage": "banks",
+        "avg_change_pct": -0.91
+      }
+    ],
+    "SEM": [
+      {
+        "name": "醫療",
+        "name_en": "Healthcare (HackMD)",
+        "slug": "futu-healthcare",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.14
+      }
+    ],
+    "DY": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "IEX": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "EWTX": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "製藥",
+        "name_en": "Pharmaceuticals",
+        "slug": "pharmaceuticals",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "pharma",
+        "avg_change_pct": 0.17
+      }
+    ],
+    "AMKR": [
+      {
+        "name": "封測代工服務",
+        "name_en": "Advanced Packaging OSAT Services",
+        "slug": "advanced-packaging-osat",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "packaging-osat-services",
+        "avg_change_pct": 0.43
+      },
+      {
+        "name": "AI 先進封裝 CoWoS",
+        "name_en": "CoWoS Advanced Packaging",
+        "slug": "cowos-advanced-packaging",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "cowos-foundry-packaging",
+        "avg_change_pct": 0.37
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      }
+    ],
+    "CDP": [
+      {
+        "name": "國防軍工",
+        "name_en": "Defense",
+        "slug": "defense",
+        "chain_group": "Policy and Defense",
+        "chain_stage": "defense-prime-systems",
+        "avg_change_pct": 2.17
+      }
+    ],
+    "LUNR": [
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "太空經濟",
+        "name_en": "Space Economy",
+        "slug": "space-economy",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": 0.79
+      },
+      {
+        "name": "太空與國防創新（ARKX）",
+        "name_en": "Space & Defense Innovation (ARKX)",
+        "slug": "space-defense-innovation",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "space",
+        "avg_change_pct": -0.01
+      },
+      {
+        "name": "自動駕駛與機器人（ARKQ）",
+        "name_en": "Autonomous Tech & Robotics (ARKQ)",
+        "slug": "autonomous-tech-robotics",
+        "chain_group": "ARK Family",
+        "chain_stage": "autonomous-tech",
+        "avg_change_pct": -0.29
+      }
+    ],
+    "MCHP": [
+      {
+        "name": "資料中心 REITs",
+        "name_en": "Data Center REITs",
+        "slug": "data-center-reits",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "real-estate",
+        "avg_change_pct": 0.62
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "ATI": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      },
+      {
+        "name": "航太與國防（廣義）",
+        "name_en": "Aerospace & Defense (Broad)",
+        "slug": "aerospace-defense",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-broad",
+        "avg_change_pct": 0.86
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "3D 列印與積層製造",
+        "name_en": "Additive Manufacturing (3D Printing)",
+        "slug": "additive-manufacturing",
+        "chain_group": "Industrial Tech",
+        "chain_stage": "3d-printing",
+        "avg_change_pct": 0.3
+      }
+    ],
+    "POWL": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "DNTH": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "SITM": [
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      },
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "ENS": [
+      {
+        "name": "鋰電池供應鏈",
+        "name_en": "Lithium & Battery Supply Chain",
+        "slug": "lithium-battery",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "battery-supply",
+        "avg_change_pct": 0.95
+      },
+      {
+        "name": "電動車與自駕",
+        "name_en": "EV & Autonomous Driving",
+        "slug": "ev-autonomous",
+        "chain_group": "Mobility Innovation",
+        "chain_stage": "ev-auto",
+        "avg_change_pct": 0.65
+      }
+    ],
+    "HURA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "TXG": [
+      {
+        "name": "基因組革命（ARKG）",
+        "name_en": "Genomic Revolution (ARKG)",
+        "slug": "genomic-revolution",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "genomics",
+        "avg_change_pct": 2.28
+      },
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "ARK 顛覆性創新（ARKK）",
+        "name_en": "ARK Disruptive Innovation (ARKK)",
+        "slug": "ark-disruptive-innovation",
+        "chain_group": "ARK Family",
+        "chain_stage": "ark-flagship",
+        "avg_change_pct": 0.92
+      }
+    ],
+    "TXN": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "VPG": [
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "ADM": [
+      {
+        "name": "農業綜合企業",
+        "name_en": "Agribusiness (Global)",
+        "slug": "agribusiness",
+        "chain_group": "Agriculture",
+        "chain_stage": "ag-broad",
+        "avg_change_pct": 1.0
+      }
+    ],
+    "EMN": [
+      {
+        "name": "化工",
+        "name_en": "Chemicals (HackMD)",
+        "slug": "futu-chemicals",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 0.63
+      }
+    ],
+    "SKYT": [
+      {
+        "name": "半導體",
+        "name_en": "Semiconductors (HackMD)",
+        "slug": "futu-semiconductors",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -1.0
+      },
+      {
+        "name": "半導體（廣義）",
+        "name_en": "Semiconductor (Broad)",
+        "slug": "semiconductor-broad",
+        "chain_group": "AI Compute Chain",
+        "chain_stage": "semi-design-mfg-test",
+        "avg_change_pct": -1.89
+      }
+    ],
+    "NSC": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "STLD": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "IRM": [
+      {
+        "name": "資料中心 REITs",
+        "name_en": "Data Center REITs",
+        "slug": "data-center-reits",
+        "chain_group": "AI Infrastructure",
+        "chain_stage": "real-estate",
+        "avg_change_pct": 0.62
+      },
+      {
+        "name": "工業 REITs",
+        "name_en": "Industrial REITs",
+        "slug": "industrial-reits",
+        "chain_group": "Digital Infra",
+        "chain_stage": "industrial-reit",
+        "avg_change_pct": -0.26
+      }
+    ],
+    "BKSY": [
+      {
+        "name": "國防科技（純）",
+        "name_en": "Defense Tech (Pure-play)",
+        "slug": "defense-tech",
+        "chain_group": "Aerospace & Defense",
+        "chain_stage": "defense-tech",
+        "avg_change_pct": 0.71
+      },
+      {
+        "name": "電子零組件",
+        "name_en": "Electronic Components (HackMD)",
+        "slug": "futu-electronic-components",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": -0.41
+      }
+    ],
+    "CABA": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      }
+    ],
+    "UNP": [
+      {
+        "name": "美國基礎建設",
+        "name_en": "US Infrastructure",
+        "slug": "us-infrastructure",
+        "chain_group": "Industrials Detail",
+        "chain_stage": "infrastructure",
+        "avg_change_pct": 0.98
+      }
+    ],
+    "SLS": [
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ],
+    "RLAY": [
+      {
+        "name": "腫瘤免疫療法",
+        "name_en": "Oncology Immunotherapy",
+        "slug": "oncology-immunotherapy",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "oncology",
+        "avg_change_pct": 2.77
+      },
+      {
+        "name": "生技",
+        "name_en": "Biotech (HackMD)",
+        "slug": "futu-biotech",
+        "chain_group": "futu_parity",
+        "chain_stage": "broad",
+        "avg_change_pct": 1.05
+      },
+      {
+        "name": "生技（廣義）",
+        "name_en": "Biotech (Broad)",
+        "slug": "biotech-broad",
+        "chain_group": "Healthcare Innovation",
+        "chain_stage": "biotech",
+        "avg_change_pct": 0.85
+      }
+    ]
+  }
 }
