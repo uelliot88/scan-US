@@ -499,7 +499,7 @@ if selected_sector != '全部產業':
 
 base_filtered = filtered
 selected_theme_slug = get_selected_theme_slug()
-theme_stats = build_theme_stats(base_filtered.keys())
+theme_stats = build_theme_stats(all_results.keys())
 strong_themes, weak_themes = build_market_theme_blocks(theme_stats)
 
 def render_theme_blocks(title, items, css_class):
