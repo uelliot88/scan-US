@@ -487,9 +487,9 @@ def render_theme_blocks(title, items, css_class):
 if theme_stats:
     strong_col, weak_col = st.columns(2)
     with strong_col:
-        render_theme_blocks('最強前五主題', strong_themes, 'theme-strong')
+        render_theme_blocks('今日領漲族群', strong_themes, 'theme-strong')
     with weak_col:
-        render_theme_blocks('最弱後五主題', weak_themes, 'theme-weak')
+        render_theme_blocks('今日領跌族群', weak_themes, 'theme-weak')
 
 selected_theme_name = theme_stats.get(selected_theme_slug, {}).get('name', '')
 if selected_theme_slug:
