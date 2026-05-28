@@ -145,6 +145,152 @@ business_map = data_store.get('business_map', {})
 stock_notes = load_stock_notes()
 stock_concepts = load_stock_concepts()
 
+SECTOR_ZH = {
+    'Basic Materials': '原物料',
+    'Communication Services': '通訊服務',
+    'Consumer Discretionary': '非必需消費',
+    'Consumer Staples': '民生消費',
+    'Consumer Cyclical': '景氣循環消費',
+    'Energy': '能源',
+    'Finance': '金融',
+    'Financial Services': '金融服務',
+    'Health Care': '醫療保健',
+    'Healthcare': '醫療保健',
+    'Industrials': '工業',
+    'Miscellaneous': '其他',
+    'Real Estate': '不動產',
+    'Technology': '科技',
+    'Telecommunications': '電信',
+    'Utilities': '公用事業',
+}
+
+INDUSTRY_ZH = {
+    'Accident &Health Insurance': '意外與健康保險',
+    'Advertising': '廣告',
+    'Aerospace': '航太',
+    'Agricultural Chemicals': '農業化學',
+    'Air Freight/Delivery Services': '航空貨運與快遞服務',
+    'Aluminum': '鋁業',
+    'Apparel': '服飾',
+    'Auto Manufacturing': '汽車製造',
+    'Auto Parts': '汽車零組件',
+    'Auto Parts:O.E.M.': '汽車零組件：原廠代工',
+    'Banks': '銀行',
+    'Beverages (Production/Distribution)': '飲料生產與通路',
+    'Biotechnology': '生物科技',
+    'Biotechnology: Biological Products (No Diagnostic Substances)': '生物科技：生物製品（非診斷試劑）',
+    'Biotechnology: Electromedical & Electrotherapeutic Apparatus': '生物科技：電子醫療與電療設備',
+    'Biotechnology: In Vitro & In Vivo Diagnostic Substances': '生物科技：體外與體內診斷試劑',
+    'Biotechnology: Laboratory Analytical Instruments': '生物科技：實驗室分析儀器',
+    'Biotechnology: Pharmaceutical Preparations': '生物科技：藥品製劑',
+    'Broadcasting': '廣播媒體',
+    'Building Materials': '建材',
+    'Building Products': '建築產品',
+    'Business Services': '商業服務',
+    'Cable & Other Pay Television Services': '有線與付費電視服務',
+    'Catalog/Specialty Distribution': '型錄與專業通路',
+    'Chemicals': '化學品',
+    'Clothing/Shoe/Accessory Stores': '服飾、鞋類與配件零售',
+    'Commercial Banks': '商業銀行',
+    'Computer Communications Equipment': '電腦通訊設備',
+    'Computer Manufacturing': '電腦製造',
+    'Computer peripheral equipment': '電腦周邊設備',
+    'Computer Software': '電腦軟體',
+    'Computer Software: Prepackaged Software': '電腦軟體：套裝軟體',
+    'Computer Software: Programming Data Processing': '電腦軟體：程式設計與資料處理',
+    'Construction/Ag Equipment/Trucks': '工程、農業設備與卡車',
+    'Consumer Electronics': '消費電子',
+    'Consumer Electronics/Appliances': '消費電子與家電',
+    'Consumer Specialties': '消費專用品',
+    'Department/Specialty Retail Stores': '百貨與專門零售店',
+    'Diversified Commercial Services': '多元商業服務',
+    'Drug Manufacturers': '製藥',
+    'EDP Services': '資料處理服務',
+    'Electric Utilities: Central': '電力公用事業：中央供電',
+    'Electrical Products': '電氣產品',
+    'Electronic Components': '電子零組件',
+    'Engineering & Construction': '工程與營造',
+    'Farming/Seeds/Milling': '農業、種子與磨粉',
+    'Finance/Investors Services': '金融與投資人服務',
+    'Finance Companies': '金融公司',
+    'Finance: Consumer Services': '金融：消費者服務',
+    'Fluid Controls': '流體控制',
+    'Food Chains': '連鎖食品零售',
+    'Home Furnishings': '居家用品',
+    'Homebuilding': '住宅建築',
+    'Hospital/Nursing Management': '醫院與護理管理',
+    'Hotels/Resorts': '飯店與度假村',
+    'Industrial Machinery/Components': '工業機械與零組件',
+    'Industrial Specialties': '工業專用品',
+    'Integrated Freight & Logistics': '綜合貨運與物流',
+    'Integrated oil Companies': '綜合石油公司',
+    'Investment Managers': '投資管理',
+    'Investment Bankers/Brokers/Service': '投資銀行、券商與金融服務',
+    'Life Insurance': '人壽保險',
+    'Major Banks': '大型銀行',
+    'Major Chemicals': '大型化學品',
+    'Major Pharmaceuticals': '大型製藥',
+    'Marine Transportation': '海運',
+    'Meat/Poultry/Fish': '肉類、家禽與魚類',
+    'Medicinal Chemicals and Botanical Products': '藥用化學品與植物製品',
+    'Medical Specialities': '醫療專科',
+    'Medical/Dental Instruments': '醫療與牙科器材',
+    'Medical/Nursing Services': '醫療與護理服務',
+    'Metal Fabrications': '金屬加工',
+    'Military/Government/Technical': '軍事、政府與技術服務',
+    'Mining & Quarrying of Nonmetallic Minerals (No Fuels)': '非金屬礦物採礦與採石（非燃料）',
+    'Misc Health and Biotechnology Services': '其他健康與生物科技服務',
+    'Natural Gas Distribution': '天然氣配送',
+    'Newspapers/Magazines': '報紙與雜誌',
+    'Office Equipment/Supplies/Services': '辦公設備、用品與服務',
+    'Oil & Gas Production': '油氣生產',
+    'Oil and Gas Field Machinery': '油氣田機械',
+    'Oil/Gas Transmission': '油氣輸送',
+    'Oilfield Services/Equipment': '油田服務與設備',
+    'Other Consumer Services': '其他消費者服務',
+    'Other Specialty Stores': '其他專門零售店',
+    'Package Goods/Cosmetics': '包裝商品與化妝品',
+    'Packaged Foods': '包裝食品',
+    'Pollution Control Equipment': '污染控制設備',
+    'Power Generation': '發電',
+    'Precision Instruments': '精密儀器',
+    'Professional Services': '專業服務',
+    'Property-Casualty Insurers': '產險',
+    'Radio And Television Broadcasting And Communications Equipment': '廣播電視與通訊設備',
+    'Railroads': '鐵路',
+    'Real Estate': '不動產',
+    'Real Estate Investment Trusts': '不動產投資信託',
+    'Recreational Games/Products/Toys': '休閒遊戲、產品與玩具',
+    'Restaurants': '餐飲',
+    'RETAIL': '零售',
+    'Retail-Auto Dealers and Gas Stations': '汽車經銷與加油站零售',
+    'Retail: Computer Software & Peripheral Equipment': '零售：電腦軟體與周邊設備',
+    'Savings Institutions': '儲蓄金融機構',
+    'Semiconductors': '半導體',
+    'Services-Misc. Amusement & Recreation': '服務：其他娛樂與休閒',
+    'Shoe Manufacturing': '鞋類製造',
+    'Specialty Insurers': '專業保險',
+    'Specialty Chemicals': '特用化學品',
+    'Steel/Iron Ore': '鋼鐵與鐵礦砂',
+    'Telecommunications Equipment': '電信設備',
+    'Textiles': '紡織',
+    'Transportation Services': '運輸服務',
+    'Trucking Freight/Courier Services': '卡車貨運與快遞服務',
+    'Water Sewer Pipeline Comm & Power Line Construction': '水務、污水、管線、通訊與電力線工程',
+}
+
+def translate_sector(value):
+    return SECTOR_ZH.get(value, value)
+
+def translate_industry(value):
+    if not value:
+        return ''
+    if value in INDUSTRY_ZH:
+        return INDUSTRY_ZH[value]
+    parts = [part.strip() for part in value.split(':')]
+    translated = [INDUSTRY_ZH.get(part, part) for part in parts if part]
+    return '：'.join(translated) if translated else value
+
 def get_stock_note(symbol, code, sector):
     note = (
         stock_notes.get(symbol)
@@ -160,11 +306,11 @@ def get_stock_note(symbol, code, sector):
     country = country_map.get(symbol) or country_map.get(code)
     meta = []
     if sector:
-        meta.append(f"Sector：{sector}")
+        meta.append(f"產業類別：{translate_sector(sector)}")
     if industry:
-        meta.append(f"Industry：{industry}")
+        meta.append(f"細分產業：{translate_industry(industry)}")
     if country:
-        meta.append(f"Country：{country}")
+        meta.append(f"國家：{country}")
     return " ｜ ".join(meta)
 
 def get_stock_concepts(symbol, code):
@@ -378,10 +524,10 @@ for i, sym in enumerate(page_symbols):
             tooltip_lines.append(stock_note)
         if concepts:
             tooltip_lines.append(f"Market themes：{'、'.join(concepts)}")
-        if sector and not any(line.startswith('Sector：') for line in tooltip_lines):
-            tooltip_lines.append(f"Sector：{sector}")
-        if industry and not any('Industry：' in line for line in tooltip_lines):
-            tooltip_lines.append(f"Industry：{industry}")
+        if sector and not any(line.startswith('產業類別：') for line in tooltip_lines):
+            tooltip_lines.append(f"產業類別：{translate_sector(sector)}")
+        if industry and not any('細分產業：' in line for line in tooltip_lines):
+            tooltip_lines.append(f"細分產業：{translate_industry(industry)}")
         stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無產業/主題資料').replace('\n', '<br>')
         title_text = (
             f"{code} {stock_name}"

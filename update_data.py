@@ -56,10 +56,14 @@ def normalize_yahoo_symbol(symbol: str) -> str:
 def is_common_equity(row: dict) -> bool:
     symbol = str(row.get('symbol', '')).strip().upper()
     name = str(row.get('name', '')).strip().lower()
+    country = str(row.get('country', '')).strip()
     if not symbol or '^' in symbol:
+        return False
+    if country != 'United States':
         return False
     blocked_terms = (
         'warrant', 'unit', 'right', 'preferred', 'preference', 'depositary',
+        'depositary shares', 'american depositary', 'adr', 'ads',
         'notes due', 'baby bond', 'etf', 'fund', 'trust', 'index',
     )
     return not any(term in name for term in blocked_terms)
@@ -99,7 +103,7 @@ def get_us_tickers():
         industry_map[symbol] = str(row.get('industry', '')).strip()
         country_map[symbol] = str(row.get('country', '')).strip()
 
-    print(f'共找到 {len(tickers)} 檔美股普通股/ADR 候選標的')
+    print(f'共找到 {len(tickers)} 檔美國普通股候選標的（已排除 ADR/ETF 等類型）')
     if MAX_STOCKS:
         print(f'測試模式：僅抽取前 {MAX_STOCKS} 檔股票進行分析')
         tickers = tickers[:MAX_STOCKS]
