@@ -314,6 +314,7 @@ def build_usstockflow_concepts(symbols):
             'stock_concepts': {},
             'theme_strength': {},
             'theme_details': {},
+            'market_theme_rankings': [],
         }
 
     session = requests.Session()
@@ -330,6 +331,32 @@ def build_usstockflow_concepts(symbols):
         topic for topic in topics
         if topic.get('topic_slug') and topic.get('has_live_data') and topic.get('rankable', True)
     ]
+    market_theme_rankings = []
+    for topic in usable_topics:
+        slug = topic.get('topic_slug') or topic.get('theme_slug') or topic.get('theme_id')
+        try:
+            strength = float(topic.get('avg_change_pct'))
+        except (TypeError, ValueError):
+            continue
+        market_theme_rankings.append({
+            'slug': slug,
+            'name': (
+                topic.get('topic_name')
+                or topic.get('theme_name')
+                or topic.get('topic_name_en')
+                or slug
+            ),
+            'name_en': topic.get('topic_name_en') or topic.get('theme_name_en') or '',
+            'strength': round(strength, 2),
+            'market_count': int(
+                topic.get('live_constituent_count')
+                or topic.get('constituent_count')
+                or topic.get('stock_count')
+                or 0
+            ),
+            'chain_group': topic.get('chain_group') or '',
+            'chain_stage': topic.get('chain_stage') or '',
+        })
     print(f'[主題] 正在整理 USStockFlow 主題資料，共 {len(usable_topics)} 個主題...')
 
     matched_theme_count = 0
@@ -425,6 +452,7 @@ def build_usstockflow_concepts(symbols):
         'stock_concepts': stock_topics,
         'theme_strength': theme_strength,
         'theme_details': theme_details,
+        'market_theme_rankings': market_theme_rankings,
     }
 
 

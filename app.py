@@ -215,6 +215,7 @@ stock_concepts_payload = load_stock_concepts_payload()
 stock_concepts = load_stock_concepts()
 stock_theme_strength = stock_concepts_payload.get('theme_strength', {})
 stock_theme_details = stock_concepts_payload.get('theme_details', {})
+market_theme_rankings = stock_concepts_payload.get('market_theme_rankings', [])
 
 SECTOR_ZH = {
     'Basic Materials': '原物料',
@@ -432,6 +433,49 @@ def build_theme_stats(symbols):
             item['strength'] = strength
     return stats
 
+def build_market_theme_blocks(theme_stats):
+    if not isinstance(market_theme_rankings, list) or not market_theme_rankings:
+        strong = sorted(
+            theme_stats.values(),
+            key=lambda item: (item['strength'], item['count'], item['name']),
+            reverse=True,
+        )[:5]
+        weak = sorted(
+            theme_stats.values(),
+            key=lambda item: (item['strength'], -item['count'], item['name']),
+        )[:5]
+        return strong, weak
+
+    items = []
+    for raw_item in market_theme_rankings:
+        slug = str(raw_item.get('slug') or '').strip()
+        if not slug:
+            continue
+        try:
+            strength = float(raw_item.get('strength'))
+        except (TypeError, ValueError):
+            continue
+        screened = theme_stats.get(slug, {})
+        items.append({
+            'slug': slug,
+            'name': str(raw_item.get('name') or screened.get('name') or slug).strip(),
+            'name_en': str(raw_item.get('name_en') or screened.get('name_en') or '').strip(),
+            'strength': strength,
+            'count': int(screened.get('count') or 0),
+            'market_count': int(raw_item.get('market_count') or 0),
+        })
+
+    strong = sorted(
+        items,
+        key=lambda item: (item['strength'], item['market_count'], item['name']),
+        reverse=True,
+    )[:5]
+    weak = sorted(
+        items,
+        key=lambda item: (item['strength'], -item['market_count'], item['name']),
+    )[:5]
+    return strong, weak
+
 # 篩選列
 filter_col1, filter_col2 = st.columns(2)
 
@@ -456,16 +500,7 @@ if selected_sector != '全部產業':
 base_filtered = filtered
 selected_theme_slug = get_selected_theme_slug()
 theme_stats = build_theme_stats(base_filtered.keys())
-
-strong_themes = sorted(
-    theme_stats.values(),
-    key=lambda item: (item['strength'], item['count'], item['name']),
-    reverse=True,
-)[:5]
-weak_themes = sorted(
-    theme_stats.values(),
-    key=lambda item: (item['strength'], -item['count'], item['name']),
-)[:5]
+strong_themes, weak_themes = build_market_theme_blocks(theme_stats)
 
 def render_theme_blocks(title, items, css_class):
     blocks = []
@@ -475,7 +510,7 @@ def render_theme_blocks(title, items, css_class):
         blocks.append(
             f'<a class="theme-block {css_class}{active_class}" href="{href}">'
             f'<span class="theme-block-name">{html.escape(item["name"])}</span>'
-            f'<span class="theme-block-meta"><strong>{item["strength"]:+.2f}%</strong><br>{item["count"]} 檔</span>'
+            f'<span class="theme-block-meta"><strong>{item["strength"]:+.2f}%</strong><br>篩出 {item["count"]} 檔</span>'
             '</a>'
         )
     st.markdown(
@@ -492,6 +527,15 @@ if theme_stats:
         render_theme_blocks('今日領跌族群', weak_themes, 'theme-weak')
 
 selected_theme_name = theme_stats.get(selected_theme_slug, {}).get('name', '')
+if selected_theme_slug and not selected_theme_name:
+    selected_theme_name = next(
+        (
+            item.get('name')
+            for item in market_theme_rankings
+            if item.get('slug') == selected_theme_slug
+        ),
+        '',
+    )
 if selected_theme_slug:
     st.markdown(
         f'<div class="theme-selected-bar">目前主題：{html.escape(selected_theme_name or selected_theme_slug)}'
