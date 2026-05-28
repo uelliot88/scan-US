@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import json
 import html
+from urllib.parse import quote, unquote
 
 APP_VERSION = "1.0"
 
@@ -82,6 +83,70 @@ st.markdown("""
     .stock-title:hover .stock-tooltip {
         visibility: visible;
         opacity: 1;
+    }
+    .theme-board {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 10px 0 14px;
+    }
+    .theme-panel-title {
+        font-size: 0.95rem;
+        font-weight: 900;
+        margin: 0 0 7px;
+    }
+    .theme-block-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .theme-block {
+        display: block;
+        min-height: 70px;
+        padding: 8px 9px;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        background: #ffffff;
+        text-decoration: none !important;
+    }
+    .theme-block:hover {
+        border-color: #000000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+    .theme-block.active {
+        border: 2px solid #000000;
+    }
+    .theme-block-name {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 900;
+        line-height: 1.25;
+        margin-bottom: 5px;
+        word-break: break-word;
+    }
+    .theme-block-meta {
+        display: block;
+        font-size: 0.75rem;
+        line-height: 1.35;
+    }
+    .theme-strong .theme-block-meta strong {
+        color: #008F39 !important;
+    }
+    .theme-weak .theme-block-meta strong {
+        color: #E32636 !important;
+    }
+    .theme-selected-bar {
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin: 8px 0 12px;
+    }
+    .theme-selected-bar a {
+        color: #000000 !important;
+        text-decoration: underline !important;
+    }
+    @media (max-width: 900px) {
+        .theme-board { grid-template-columns: 1fr; }
+        .theme-block-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -331,8 +396,44 @@ def get_theme_strength(symbol, code):
     except (TypeError, ValueError):
         return 0
 
+def get_selected_theme_slug():
+    try:
+        raw_theme = st.query_params.get('theme')
+    except AttributeError:
+        raw_theme = st.experimental_get_query_params().get('theme')
+
+    if isinstance(raw_theme, list):
+        raw_theme = raw_theme[0] if raw_theme else ''
+    return unquote(raw_theme or '')
+
+def build_theme_stats(symbols):
+    stats = {}
+    for symbol in symbols:
+        seen = set()
+        for detail in stock_theme_details.get(symbol, []):
+            slug = str(detail.get('slug') or detail.get('name') or '').strip()
+            if not slug or slug in seen:
+                continue
+            seen.add(slug)
+            name = str(detail.get('name') or slug).strip()
+            name_en = str(detail.get('name_en') or '').strip()
+            try:
+                strength = float(detail.get('avg_change_pct'))
+            except (TypeError, ValueError):
+                strength = 0.0
+            item = stats.setdefault(slug, {
+                'slug': slug,
+                'name': name,
+                'name_en': name_en,
+                'strength': strength,
+                'count': 0,
+            })
+            item['count'] += 1
+            item['strength'] = strength
+    return stats
+
 # 篩選列
-filter_col1, filter_col2, filter_col3 = st.columns(3)
+filter_col1, filter_col2 = st.columns(2)
 
 with filter_col1:
     type_options = {'全部': None, '漲後整理（型態A）': 'A', '多頭排列（型態B）': 'B'}
@@ -341,31 +442,65 @@ with filter_col1:
 
 with filter_col2:
     all_sectors = sorted({v for v in sector_map.values() if v})
-    sector_options = ['全部 Sector'] + all_sectors
-    selected_sector = st.selectbox('Sector', sector_options, index=0)
-
-with filter_col3:
-    all_themes = sorted({
-        theme
-        for themes in stock_concepts.values()
-        for theme in (themes if isinstance(themes, list) else [themes])
-        if str(theme).strip()
-    })
-    theme_options = ['全部主題'] + all_themes
-    selected_theme = st.selectbox('市場主題', theme_options, index=0)
+    sector_options = ['全部產業'] + all_sectors
+    selected_sector = st.selectbox('產業類別', sector_options, index=0)
 
 if selected_type:
     filtered = {k: v for k, v in all_results.items() if v.get('type') == selected_type}
 else:
     filtered = all_results
 
-if selected_sector != '全部 Sector':
+if selected_sector != '全部產業':
     filtered = {k: v for k, v in filtered.items() if v.get('sector') == selected_sector}
 
-if selected_theme != '全部主題':
+base_filtered = filtered
+selected_theme_slug = get_selected_theme_slug()
+theme_stats = build_theme_stats(base_filtered.keys())
+
+strong_themes = sorted(
+    theme_stats.values(),
+    key=lambda item: (item['strength'], item['count'], item['name']),
+    reverse=True,
+)[:5]
+weak_themes = sorted(
+    theme_stats.values(),
+    key=lambda item: (item['strength'], -item['count'], item['name']),
+)[:5]
+
+def render_theme_blocks(title, items, css_class):
+    blocks = []
+    for item in items:
+        active_class = ' active' if item['slug'] == selected_theme_slug else ''
+        href = f"?theme={quote(item['slug'])}&page=1"
+        blocks.append(
+            f'<a class="theme-block {css_class}{active_class}" href="{href}">'
+            f'<span class="theme-block-name">{html.escape(item["name"])}</span>'
+            f'<span class="theme-block-meta"><strong>{item["strength"]:+.2f}%</strong><br>{item["count"]} 檔</span>'
+            '</a>'
+        )
+    st.markdown(
+        f'<div><div class="theme-panel-title">{html.escape(title)}</div>'
+        f'<div class="theme-block-grid">{"".join(blocks)}</div></div>',
+        unsafe_allow_html=True,
+    )
+
+if theme_stats:
+    strong_col, weak_col = st.columns(2)
+    with strong_col:
+        render_theme_blocks('最強前五主題', strong_themes, 'theme-strong')
+    with weak_col:
+        render_theme_blocks('最弱後五主題', weak_themes, 'theme-weak')
+
+selected_theme_name = theme_stats.get(selected_theme_slug, {}).get('name', '')
+if selected_theme_slug:
+    st.markdown(
+        f'<div class="theme-selected-bar">目前主題：{html.escape(selected_theme_name or selected_theme_slug)}'
+        f' ｜ <a href="?page=1">清除主題</a></div>',
+        unsafe_allow_html=True,
+    )
     filtered = {
-        k: v for k, v in filtered.items()
-        if selected_theme in get_stock_concepts(k, k)
+        k: v for k, v in base_filtered.items()
+        if any(detail.get('slug') == selected_theme_slug for detail in stock_theme_details.get(k, []))
     }
 
 symbol_list = sorted(list(filtered.keys()))
