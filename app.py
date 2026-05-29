@@ -551,6 +551,30 @@ def toggle_selected(sym):
         st.session_state.selected.discard(sym)
     sync_selected_to_query()
 
+def get_export_industry(symbol):
+    code = str(symbol).upper()
+    stock_data = data_store.get('results', {}).get(code, {})
+    industry = (
+        industry_map.get(code)
+        or stock_data.get('industry')
+        or '未分類'
+    )
+    industry_label = translate_industry(industry)
+    return industry_label or '未分類'
+
+def build_tradingview_watchlist(selected_symbols):
+    groups = {}
+    for sym in sorted({str(item).upper() for item in selected_symbols}):
+        industry_label = get_export_industry(sym)
+        groups.setdefault(industry_label, []).append(sym)
+
+    lines = []
+    for industry_label in sorted(groups):
+        lines.append(f'###{industry_label}標的###')
+        lines.append(','.join(groups[industry_label]))
+        lines.append('')
+    return '\n'.join(lines).strip() + '\n'
+
 def get_selected_query_text():
     return ','.join(sorted(st.session_state.selected))
 
@@ -685,9 +709,7 @@ sel_count = len(st.session_state.selected)
 dl_col, clr_col, _ = st.columns([2, 1, 4])
 with dl_col:
     if sel_count > 0:
-        tv_text = ','.join(
-            s for s in sorted(st.session_state.selected)
-        )
+        tv_text = build_tradingview_watchlist(st.session_state.selected)
         st.download_button(
             f'⬇ 下載收藏清單（{sel_count} 檔）',
             data=tv_text,
