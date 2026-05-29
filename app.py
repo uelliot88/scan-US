@@ -502,11 +502,63 @@ selected_theme_slug = get_selected_theme_slug()
 theme_stats = build_theme_stats(all_results.keys())
 strong_themes, weak_themes = build_market_theme_blocks(theme_stats)
 
+# ==========================================
+# 4. 收藏狀態初始化
+# ==========================================
+if 'selected' not in st.session_state:
+    try:
+        raw_selected = st.query_params.get('selected')
+    except AttributeError:
+        raw_selected = st.experimental_get_query_params().get('selected')
+    if isinstance(raw_selected, list):
+        raw_selected = raw_selected[0] if raw_selected else ''
+    st.session_state.selected = {
+        item.strip().upper()
+        for item in str(raw_selected or '').split(',')
+        if item.strip()
+    }
+
+def sync_selected_to_query():
+    selected_text = ','.join(sorted(st.session_state.selected))
+    try:
+        if selected_text:
+            st.query_params['selected'] = selected_text
+        elif 'selected' in st.query_params:
+            del st.query_params['selected']
+    except AttributeError:
+        params = st.experimental_get_query_params()
+        if selected_text:
+            params['selected'] = selected_text
+        else:
+            params.pop('selected', None)
+        st.experimental_set_query_params(**params)
+
+def sync_selected_from_checkboxes(visible_symbols):
+    selected = set(st.session_state.selected)
+    for sym in visible_symbols:
+        checked = st.session_state.get(f'chk_{sym}', sym in selected)
+        if checked:
+            selected.add(sym)
+        else:
+            selected.discard(sym)
+    st.session_state.selected = selected
+    sync_selected_to_query()
+
+def toggle_selected(sym):
+    if st.session_state.get(f'chk_{sym}', False):
+        st.session_state.selected.add(sym)
+    else:
+        st.session_state.selected.discard(sym)
+    sync_selected_to_query()
+
 def render_theme_blocks(title, items, css_class):
     blocks = []
+    selected_param = ','.join(sorted(st.session_state.selected))
     for item in items:
         active_class = ' active' if item['slug'] == selected_theme_slug else ''
         href = f"?theme={quote(item['slug'])}&page=1"
+        if selected_param:
+            href += f"&selected={quote(selected_param)}"
         blocks.append(
             f'<a class="theme-block {css_class}{active_class}" href="{href}">'
             f'<span class="theme-block-name">{html.escape(item["name"])}</span>'
@@ -537,9 +589,13 @@ if selected_theme_slug and not selected_theme_name:
         '',
     )
 if selected_theme_slug:
+    selected_param = ','.join(sorted(st.session_state.selected))
+    clear_href = '?page=1'
+    if selected_param:
+        clear_href += f'&selected={quote(selected_param)}'
     st.markdown(
         f'<div class="theme-selected-bar">目前主題：{html.escape(selected_theme_name or selected_theme_slug)}'
-        f' ｜ <a href="?page=1">清除主題</a></div>',
+        f' ｜ <a href="{clear_href}">清除主題</a></div>',
         unsafe_allow_html=True,
     )
     filtered = {
@@ -554,31 +610,6 @@ if not symbol_list:
     st.stop()
 
 all_results = filtered
-
-# ==========================================
-# 4. 收藏狀態初始化
-# ==========================================
-if 'selected' not in st.session_state:
-    st.session_state.selected = set()
-
-def sync_selected_from_checkboxes():
-    selected = set(st.session_state.selected)
-    prefix = 'chk_'
-    for key, checked in st.session_state.items():
-        if not key.startswith(prefix):
-            continue
-        sym = key[len(prefix):]
-        if checked:
-            selected.add(sym)
-        else:
-            selected.discard(sym)
-    st.session_state.selected = selected
-
-def toggle_selected(sym):
-    if st.session_state.get(f'chk_{sym}', False):
-        st.session_state.selected.add(sym)
-    else:
-        st.session_state.selected.discard(sym)
 
 # ==========================================
 # 5. 分頁設定
@@ -629,7 +660,7 @@ with col_info:
 
 start = (page - 1) * PAGE_SIZE
 page_symbols = symbol_list[start:start + PAGE_SIZE]
-sync_selected_from_checkboxes()
+sync_selected_from_checkboxes(page_symbols)
 
 # 收藏下載列
 sel_count = len(st.session_state.selected)
@@ -650,6 +681,10 @@ with dl_col:
 with clr_col:
     if sel_count > 0 and st.button('清除全部'):
         st.session_state.selected = set()
+        for key in list(st.session_state.keys()):
+            if key.startswith('chk_'):
+                st.session_state[key] = False
+        sync_selected_to_query()
         st.rerun()
 
 # ==========================================
