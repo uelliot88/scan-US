@@ -551,14 +551,24 @@ def toggle_selected(sym):
         st.session_state.selected.discard(sym)
     sync_selected_to_query()
 
+def get_selected_query_text():
+    return ','.join(sorted(st.session_state.selected))
+
+def build_page_href(page_number, theme_slug=None, include_theme=True):
+    params = [f'page={page_number}']
+    selected_text = get_selected_query_text()
+    active_theme = selected_theme_slug if theme_slug is None else theme_slug
+    if include_theme and active_theme:
+        params.append(f'theme={quote(active_theme)}')
+    if selected_text:
+        params.append(f'selected={quote(selected_text)}')
+    return '?' + '&'.join(params)
+
 def render_theme_blocks(title, items, css_class):
     blocks = []
-    selected_param = ','.join(sorted(st.session_state.selected))
     for item in items:
         active_class = ' active' if item['slug'] == selected_theme_slug else ''
-        href = f"?theme={quote(item['slug'])}&page=1"
-        if selected_param:
-            href += f"&selected={quote(selected_param)}"
+        href = build_page_href(1, theme_slug=item['slug'])
         blocks.append(
             f'<a class="theme-block {css_class}{active_class}" href="{href}">'
             f'<span class="theme-block-name">{html.escape(item["name"])}</span>'
@@ -589,10 +599,7 @@ if selected_theme_slug and not selected_theme_name:
         '',
     )
 if selected_theme_slug:
-    selected_param = ','.join(sorted(st.session_state.selected))
-    clear_href = '?page=1'
-    if selected_param:
-        clear_href += f'&selected={quote(selected_param)}'
+    clear_href = build_page_href(1, include_theme=False)
     st.markdown(
         f'<div class="theme-selected-bar">目前主題：{html.escape(selected_theme_name or selected_theme_slug)}'
         f' ｜ <a href="{clear_href}">清除主題</a></div>',
@@ -636,7 +643,18 @@ def set_query_page(page_number):
     try:
         st.query_params['page'] = str(page_number)
     except AttributeError:
-        st.experimental_set_query_params(page=page_number)
+        params = st.experimental_get_query_params()
+        params['page'] = page_number
+        selected_text = get_selected_query_text()
+        if selected_text:
+            params['selected'] = selected_text
+        else:
+            params.pop('selected', None)
+        if selected_theme_slug:
+            params['theme'] = selected_theme_slug
+        else:
+            params.pop('theme', None)
+        st.experimental_set_query_params(**params)
 
 if 'current_page' not in st.session_state:
     st.session_state.current_page = 1
@@ -838,7 +856,7 @@ page_range = get_page_range(page, total_pages)
 # 底部右對齊導覽：純文字連結，target=_self 保持在同一個視窗切換
 nav_items = []
 if page > 1:
-    nav_items.append(f'<a href="?page={page - 1}" target="_self">◀ 前一頁</a>')
+    nav_items.append(f'<a href="{build_page_href(page - 1)}" target="_self">◀ 前一頁</a>')
 else:
     nav_items.append('<span class="disabled-page">◀ 前一頁</span>')
 
@@ -848,10 +866,10 @@ for p in page_range:
     elif p == page:
         nav_items.append(f'<span class="current-page">{p}</span>')
     else:
-        nav_items.append(f'<a href="?page={p}" target="_self">{p}</a>')
+        nav_items.append(f'<a href="{build_page_href(p)}" target="_self">{p}</a>')
 
 if page < total_pages:
-    nav_items.append(f'<a href="?page={page + 1}" target="_self">下一頁 ▶</a>')
+    nav_items.append(f'<a href="{build_page_href(page + 1)}" target="_self">下一頁 ▶</a>')
 else:
     nav_items.append('<span class="disabled-page">下一頁 ▶</span>')
 
