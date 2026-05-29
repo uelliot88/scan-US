@@ -570,7 +570,7 @@ def build_tradingview_watchlist(selected_symbols):
 
     lines = []
     for industry_label in sorted(groups):
-        lines.append(f'###{industry_label}標的###')
+        lines.append(f'###{industry_label}###')
         lines.append(','.join(groups[industry_label]))
         lines.append('')
     return '\n'.join(lines).strip() + '\n'
