@@ -213,6 +213,44 @@ def check_type_b(df):
     return ma10 > ma20 > ma60
 
 
+def check_type_c_pullback_rebound(df):
+    if len(df) < 90:
+        return False
+
+    recent = df.tail(90).copy()
+    high_pos = int(np.argmax(recent['High'].to_numpy()))
+    high_price = float(recent['High'].iloc[high_pos])
+    if high_price <= 0 or high_pos >= len(recent) - 2:
+        return False
+
+    prior_low = float(recent['Low'].iloc[:high_pos + 1].min())
+    if prior_low <= 0 or (high_price - prior_low) / prior_low < 0.50:
+        return False
+
+    after_high = recent.iloc[high_pos + 1:].copy()
+    for low_pos_rel in range(len(after_high) - 1):
+        low_price = float(after_high['Low'].iloc[low_pos_rel])
+        if low_price <= 0:
+            continue
+
+        drawdown = (high_price - low_price) / high_price
+        if drawdown < 0.18 or drawdown > 0.36:
+            continue
+
+        after_low = after_high.iloc[low_pos_rel:].copy()
+        rebound = (float(after_low['High'].max()) - low_price) / low_price
+        if rebound < 0.08:
+            continue
+
+        lows_after_pullback = after_low['Low'].iloc[1:]
+        if len(lows_after_pullback) and float(lows_after_pullback.min()) < low_price:
+            continue
+
+        return True
+
+    return False
+
+
 def identify_uptrend(df, symbol):
     if len(df) < LOOKBACK_PERIOD * 2:
         return []
@@ -501,10 +539,11 @@ def main():
 
             is_a = check_type_a(clean_df)
             is_b = check_type_b(clean_df)
-            if not (is_a or is_b):
+            is_c = check_type_c_pullback_rebound(clean_df)
+            if not (is_a or is_b or is_c):
                 filtered_out_by_ma += 1
                 continue
-            stock_type = 'A' if is_a else 'B'
+            stock_type = 'A' if is_a else ('B' if is_b else 'C')
 
             segments = identify_uptrend(clean_df, symbol)
             if not segments:

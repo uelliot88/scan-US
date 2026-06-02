@@ -217,6 +217,12 @@ stock_theme_strength = stock_concepts_payload.get('theme_strength', {})
 stock_theme_details = stock_concepts_payload.get('theme_details', {})
 market_theme_rankings = stock_concepts_payload.get('market_theme_rankings', [])
 
+TYPE_LABELS = {
+    'A': '漲後整理',
+    'B': '多頭排列',
+    'C': '回撤反彈',
+}
+
 SECTOR_ZH = {
     'Basic Materials': '原物料',
     'Communication Services': '通訊服務',
@@ -480,7 +486,12 @@ def build_market_theme_blocks(theme_stats):
 filter_col1, filter_col2 = st.columns(2)
 
 with filter_col1:
-    type_options = {'全部': None, '漲後整理（型態A）': 'A', '多頭排列（型態B）': 'B'}
+    type_options = {
+        '全部': None,
+        '漲後整理（型態A）': 'A',
+        '多頭排列（型態B）': 'B',
+        '回撤反彈（型態C）': 'C',
+    }
     selected_label = st.selectbox('型態選擇', list(type_options.keys()), index=0)
     selected_type = type_options[selected_label]
 
@@ -813,7 +824,7 @@ for i, sym in enumerate(page_symbols):
         stock_note_html = html.escape('\n'.join(tooltip_lines) or '暫無產業/主題資料').replace('\n', '<br>')
         title_text = (
             f"{code} {stock_name}"
-            f" {'｜漲後整理' if k_data.get('type')=='A' else '｜多頭排列'}"
+            f" ｜{TYPE_LABELS.get(k_data.get('type'), '多頭排列')}"
             f"{f'  [{sector}]' if sector else ''}"
             f"{'  RS↑' if k_data.get('rs_spy') else ''}"
             f"{'  VOL↑' if k_data.get('vol_surge') else ''}"
