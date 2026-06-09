@@ -197,9 +197,11 @@ def check_type_a(df):
     temp_df, recent_df = _build_ma_df(df)
     if not _check_base(df, temp_df, recent_df):
         return False
-    ma10 = float(temp_df['MA10'].iloc[-1])
-    ma20 = float(temp_df['MA20'].iloc[-1])
-    return abs(ma10 - ma20) / ma20 <= 0.03
+    recent_ma = temp_df[['MA10', 'MA20']].tail(10).dropna()
+    if len(recent_ma) < 10:
+        return False
+    spread = (recent_ma['MA10'] - recent_ma['MA20']).abs() / recent_ma['MA20']
+    return bool((spread <= 0.03).all())
 
 
 def check_type_b(df):
@@ -214,10 +216,10 @@ def check_type_b(df):
 
 
 def check_type_c_pullback_rebound(df):
-    if len(df) < 90:
+    if len(df) < 65:
         return False
 
-    recent = df.tail(90).copy()
+    recent = df.tail(65).copy()
     high_pos = int(np.argmax(recent['High'].to_numpy()))
     high_price = float(recent['High'].iloc[high_pos])
     if high_price <= 0 or high_pos >= len(recent) - 2:
@@ -234,12 +236,15 @@ def check_type_c_pullback_rebound(df):
             continue
 
         drawdown = (high_price - low_price) / high_price
-        if drawdown < 0.18 or drawdown > 0.36:
+        if drawdown < 0.16 or drawdown > 0.36:
             continue
 
         after_low = after_high.iloc[low_pos_rel:].copy()
-        rebound = (float(after_low['High'].max()) - low_price) / low_price
+        rebound_high = float(after_low['High'].max())
+        rebound = (rebound_high - low_price) / low_price
         if rebound < 0.08:
+            continue
+        if rebound_high > high_price:
             continue
 
         lows_after_pullback = after_low['Low'].iloc[1:]
@@ -543,7 +548,7 @@ def main():
             if not (is_a or is_b or is_c):
                 filtered_out_by_ma += 1
                 continue
-            stock_type = 'A' if is_a else ('B' if is_b else 'C')
+            stock_type = 'C' if is_c else ('A' if is_a else 'B')
 
             segments = identify_uptrend(clean_df, symbol)
             if not segments:

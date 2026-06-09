@@ -6,7 +6,7 @@ import json
 import html
 from urllib.parse import quote, unquote
 
-APP_VERSION = "1.0"
+APP_VERSION = "1.1"
 
 # ==========================================
 # 頁面與底色初始化
@@ -574,17 +574,50 @@ def get_export_industry(symbol):
     return industry_label or '未分類'
 
 def build_tradingview_watchlist(selected_symbols):
+    lines = []
+    for industry_label, symbols in build_export_groups(selected_symbols):
+        lines.append(f'###{industry_label}###')
+        lines.append(','.join(symbols))
+        lines.append('')
+    return '\n'.join(lines).strip() + '\n'
+
+def build_export_groups(selected_symbols):
     groups = {}
     for sym in sorted({str(item).upper() for item in selected_symbols}):
         industry_label = get_export_industry(sym)
         groups.setdefault(industry_label, []).append(sym)
+    return [(industry_label, groups[industry_label]) for industry_label in sorted(groups)]
 
+def build_xq_csv(selected_symbols):
     lines = []
-    for industry_label in sorted(groups):
-        lines.append(f'###{industry_label}###')
-        lines.append(','.join(groups[industry_label]))
-        lines.append('')
-    return '\n'.join(lines).strip() + '\n'
+    for industry_label, symbols in build_export_groups(selected_symbols):
+        lines.append(f'{industry_label}:')
+        lines.extend(f'{sym}.US' for sym in symbols)
+    return '\r\n'.join(lines) + ('\r\n' if lines else '')
+
+@st.fragment
+def render_download_buttons(selected_symbols, count):
+    tv_col, xq_col = st.columns([1.45, 1.05], gap=None)
+    with tv_col:
+        st.download_button(
+            f'⬇ TradingView清單（{count} 檔）',
+            data=('\ufeff' + build_tradingview_watchlist(selected_symbols)).encode('utf-8'),
+            file_name='watchlist.txt',
+            mime='text/plain; charset=utf-8',
+            key='download_tradingview_watchlist',
+            on_click='ignore',
+            use_container_width=True,
+        )
+    with xq_col:
+        st.download_button(
+            f'⬇ XQ清單（{count} 檔）',
+            data=build_xq_csv(selected_symbols).encode('big5', errors='replace'),
+            file_name='xq_watchlist.csv',
+            mime='text/csv; charset=big5',
+            key='download_xq_watchlist',
+            on_click='ignore',
+            use_container_width=True,
+        )
 
 def get_selected_query_text():
     return ','.join(sorted(st.session_state.selected))
@@ -720,13 +753,7 @@ sel_count = len(st.session_state.selected)
 dl_col, clr_col, _ = st.columns([2, 1, 4])
 with dl_col:
     if sel_count > 0:
-        tv_text = build_tradingview_watchlist(st.session_state.selected)
-        st.download_button(
-            f'⬇ 下載收藏清單（{sel_count} 檔）',
-            data=tv_text,
-            file_name='watchlist.txt',
-            mime='text/plain'
-        )
+        render_download_buttons(st.session_state.selected, sel_count)
     else:
         st.markdown("<div style='padding-top:8px; font-size:0.85rem; color:#888;'>尚未勾選任何標的</div>", unsafe_allow_html=True)
 with clr_col:
